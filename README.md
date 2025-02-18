@@ -7,7 +7,6 @@ Why? Why not.
 
 Other particularities of this savefile:
 - Holy Roman Empire: Represents the European Union with the current 27 countries of the union represented as princes of the HRE. Germany is the Emperor at the start of the game.
-
 Princes: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Spain, Sweden.
 Electors: Germany, France, Italy, Netherlands, Belgium. (These are the founder states of the European Union so it's only fair.)
 Free Cities: Cyprus, Luxembourg, Malta. (Note: This is way less than the 12 free cities required by the HRE mechanics. The emperor will have a negative modifier to Imperial Authority due to this.)
@@ -38,8 +37,10 @@ Why is Germany the Emperor? Why not.
 
 - Ongoing wars: You'll find that there are two ongoing wars at the start of the game. Russian conquest of Crimea and Israeli conquest of Palestine. These should be self-explanatory.
 
+- Starting Country: There has to be one, I think. So I chose Germany for reasons you'll understand if you've read the rest of this readme file. I will research into the possibility of not having a country selected by default so you can choose your own. If this is not possible, I'll make some different saving files with different starting nations. This is very easy to do so feel free to ask if you want any country in particular.
+
 Future plans for this project:
-I plan to update the savefile with more details when I find the time, energy and motivation to do so. Don't expect updates often but feel free to contribute to the project with a pull request that describes the suggested changes, or make suggestions to me via discord.
+I plan to update the savefile with more details (more accurate religion map, provinces of interest, some set alliances, etc) when I find the time, energy and motivation to do so. Don't expect updates often but feel free to contribute to the project with a pull request that describes the suggested changes, or to make suggestions to me via discord.
 
 I hope you enjoy playing it as much as I enjoyed making it and letting it run all night whilst I slept with the computer on observer mode to find out what happened in the morning.
 If you play it and decide to make a video about it don't be shy about sharing it, I'm very curious to see what you do with this file. Any feedback on what nations feel super strong or super weak is also welcome.
