@@ -26,8 +26,8 @@ Why is Germany the Emperor? Why not.
 
 - Institutions and Technology: To make it make sense, I followed the wikipedia classification of developing country while setting up the institutions and technology level of all countries in the savefile. (https://en.wikipedia.org/wiki/Developing_country)
 1. Developed countries: Feudalism embraced. All technologies level 3.
-2. Emerging and developing countries: Feudalism not embraced but spawned in the capital province. All technologies level 3.
-3. Least developed countries: Feudalism not embraced. All technologies level 2.
+2. Emerging and developing countries: Feudalism not embraced but spawned in the capital province. All technologies level 2.
+3. Least developed countries: Feudalism not embraced. All technologies level 1.
 
 - Religion and Culture: It's a lot of work and I don't really know enough to make informed decisions that won't piss off anyone. They have remained unchanged from the religions assigned to the countries/provinces originally by the game, but this might change in future versions. 
 
