@@ -1,7 +1,7 @@
 # european-union-universalis
-European Union Universalis. A savefile for the game Europa Universalis IV.
+European Union Universalis. A mod for the game Europa Universalis IV 1.37.
 
-European Union Universalis is a savefile for the game Europa Universalis IV which recreates the current (year 2025) borders of the countries, but it's still set in the original start date of November 11, 1444.
+European Union Universalis is a mod for the game Europa Universalis IV which recreates the current (year 2025) borders of the countries, but it's still set in the original start date of November 11, 1444.
 
 Why? Why not.
 
