@@ -1,0 +1,13 @@
+for each country->
+1. country file
+2. Capital
+3. head of state
+2. Form of government
+4. religion
+3. culture (inherited from selecting provinces)
+
+
+Head Of State And Government: President: Ashraf Ghani; de facto leader Hibatullah Akhundzada4
+Capital: Kabul
+Form Of Government: Islamic republic1 with two legislative houses (House of Elders [1022]; House of the People [2503]); de facto transitional government4
+Official Religion: Islam

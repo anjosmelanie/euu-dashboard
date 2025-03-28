@@ -1,0 +1,1406 @@
+[
+    {
+        "Country":"Afghanistan",
+        "Capital":"Kabul",
+        "State Religion":"Sunni",
+        "Government Type":"Islamic Republic (Taliban-controlled)",
+        "EU Member":"No",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Albania",
+        "Capital":"Tirana",
+        "State Religion":"Sunni",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Algeria",
+        "Capital":"Algiers",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Andorra",
+        "Capital":"Andorra la Vella",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Co-Principality",
+        "EU Member":"No",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Angola",
+        "Capital":"Luanda",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Antigua and Barbuda",
+        "Capital":"Saint Johns",
+        "State Religion":"Catholic",
+        "Government Type":"Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Argentina",
+        "Capital":"Buenos Aires",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Armenia",
+        "Capital":"Yerevan",
+        "State Religion":"Orthodox",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Australia",
+        "Capital":"Canberra",
+        "State Religion":"Catholic",
+        "Government Type":"Federal Parliamentary Democracy",
+        "EU Member":"No",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Austria",
+        "Capital":"Vienna",
+        "State Religion":"Catholic",
+        "Government Type":"Federal Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Azerbaijan",
+        "Capital":"Baku",
+        "State Religion":"Shia",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Bahamas",
+        "Capital":"Nassau",
+        "State Religion":"Catholic",
+        "Government Type":"Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Bahrain",
+        "Capital":"Manama",
+        "State Religion":"Shia",
+        "Government Type":"Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Bangladesh",
+        "Capital":"Dhaka",
+        "State Religion":"Sunni",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Barbados",
+        "Capital":"Bridgetown",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Belarus",
+        "Capital":"Minsk",
+        "State Religion":"Orthodox",
+        "Government Type":"Presidential Republic (Authoritarian)",
+        "EU Member":"No",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Belgium",
+        "Capital":"Brussels",
+        "State Religion":"Catholic",
+        "Government Type":"Federal Parliamentary Democracy",
+        "EU Member":"Yes",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Belize",
+        "Capital":"Belmopan",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Democracy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Benin",
+        "Capital":"Porto-Novo",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Bhutan",
+        "Capital":"Thimphu",
+        "State Religion":"Mahayana",
+        "Government Type":"Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Bolivia",
+        "Capital":"Sucre",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Bosnia and Herzegovina",
+        "Capital":"Sarajevo",
+        "State Religion":"Sunni",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Botswana",
+        "Capital":"Gaborone",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Brazil",
+        "Capital":"Brasilia",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Brunei",
+        "Capital":"Bandar Seri Begawan",
+        "State Religion":"Sunni",
+        "Government Type":"Absolute Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Absolute Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Bulgaria",
+        "Capital":"Sofia",
+        "State Religion":"Orthodox",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Burkina Faso",
+        "Capital":"Ouagadougou",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Burundi",
+        "Capital":"Gitega",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Cambodia",
+        "Capital":"Phnom Penh",
+        "State Religion":"Mahayana",
+        "Government Type":"Parliamentary Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Cameroon",
+        "Capital":"Yaounde",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Canada",
+        "Capital":"Ottawa",
+        "State Religion":"Catholic",
+        "Government Type":"Federal Parliamentary Democracy",
+        "EU Member":"No",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Central African Republic",
+        "Capital":"Bangui",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Chad",
+        "Capital":"NDjamena",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Chile",
+        "Capital":"Santiago",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"China",
+        "Capital":"Beijing",
+        "State Religion":"Mahayana",
+        "Government Type":"One-Party Communist State",
+        "EU Member":"No",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Colombia",
+        "Capital":"Bogota",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Comoros",
+        "Capital":"Moroni",
+        "State Religion":"Sunni",
+        "Government Type":"Federal Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Democratic Republic of the Congo",
+        "Capital":"Kinshasa",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Republic of the Congo",
+        "Capital":"Brazzaville",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Costa Rica",
+        "Capital":"San Jose",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Croatia",
+        "Capital":"Zagreb",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Cuba",
+        "Capital":"Havana",
+        "State Religion":"Catholic",
+        "Government Type":"One-Party Communist State",
+        "EU Member":"No",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Cyprus",
+        "Capital":"Nicosia",
+        "State Religion":"Orthodox",
+        "Government Type":"Presidential Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Czech Republic",
+        "Capital":"Prague",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Denmark",
+        "Capital":"Copenhagen",
+        "State Religion":"Protestant",
+        "Government Type":"Parliamentary Constitutional Monarchy",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Djibouti",
+        "Capital":"Djibouti",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Dominican Republic",
+        "Capital":"Santo Domingo",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Ecuador",
+        "Capital":"Quito",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Egypt",
+        "Capital":"Cairo",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"El Salvador",
+        "Capital":"San Salvador",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Eritrea",
+        "Capital":"Asmara",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Estonia",
+        "Capital":"Tallinn",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Eswatini",
+        "Capital":"Mbabane",
+        "State Religion":"Catholic",
+        "Government Type":"Absolute Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Absolute Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Ethiopia",
+        "Capital":"Addis Ababa",
+        "State Religion":"Orthodox",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Fiji",
+        "Capital":"Suva",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Finland",
+        "Capital":"Helsinki",
+        "State Religion":"Protestant",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"France",
+        "Capital":"Paris",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Elector"
+    },
+    {
+        "Country":"Gabon",
+        "Capital":"Libreville",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Gambia",
+        "Capital":"Banjul",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Georgia",
+        "Capital":"Tbilisi",
+        "State Religion":"Orthodox",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Germany",
+        "Capital":"Berlin",
+        "State Religion":"Protestant",
+        "Government Type":"Federal Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Emperor"
+    },
+    {
+        "Country":"Ghana",
+        "Capital":"Accra",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Greece",
+        "Capital":"Athens",
+        "State Religion":"Orthodox",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Grenada",
+        "Capital":"Saint Georges",
+        "State Religion":"Christianity",
+        "Government Type":"Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Guatemala",
+        "Capital":"Guatemala City",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Guinea",
+        "Capital":"Conakry",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Guinea-Bissau",
+        "Capital":"Bissau",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Guyana",
+        "Capital":"Georgetown",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Haiti",
+        "Capital":"Port-au-Prince",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Honduras",
+        "Capital":"Tegucigalpa",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Hungary",
+        "Capital":"Budapest",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Iceland",
+        "Capital":"Reykjavik",
+        "State Religion":"Protestant",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"India",
+        "Capital":"New Delhi",
+        "State Religion":"Hindu",
+        "Government Type":"Federal Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Indonesia",
+        "Capital":"Jakarta",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Iran",
+        "Capital":"Tehran",
+        "State Religion":"Shia",
+        "Government Type":"Islamic Republic",
+        "EU Member":"No",
+        "EU4 Government":"Theocratic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Iraq",
+        "Capital":"Baghdad",
+        "State Religion":"Shia",
+        "Government Type":"Federal Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Ireland",
+        "Capital":"Dublin",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Israel",
+        "Capital":"Jerusalem",
+        "State Religion":"Jewish",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Italy",
+        "Capital":"Rome",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Elector"
+    },
+    {
+        "Country":"Jamaica",
+        "Capital":"Kingston",
+        "State Religion":"Christianity",
+        "Government Type":"Parliamentary Democracy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Japan",
+        "Capital":"Tokyo",
+        "State Religion":"Shinto",
+        "Government Type":"Parliamentary Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Jordan",
+        "Capital":"Amman",
+        "State Religion":"Sunni",
+        "Government Type":"Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Kazakhstan",
+        "Capital":"Astana",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Kenya",
+        "Capital":"Nairobi",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Kiribati",
+        "Capital":"Tarawa",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Kuwait",
+        "Capital":"Kuwait City",
+        "State Religion":"Sunni",
+        "Government Type":"Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Kyrgyzstan",
+        "Capital":"Bishkek",
+        "State Religion":"Sunni",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Laos",
+        "Capital":"Vientiane",
+        "State Religion":"Buddhism",
+        "Government Type":"One-Party Communist State",
+        "EU Member":"No",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Latvia",
+        "Capital":"Riga",
+        "State Religion":"Protestant",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Lebanon",
+        "Capital":"Beirut",
+        "State Religion":"Sunni",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Lesotho",
+        "Capital":"Maseru",
+        "State Religion":"Christianity",
+        "Government Type":"Parliamentary Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Liberia",
+        "Capital":"Monrovia",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Libya",
+        "Capital":"Tripoli",
+        "State Religion":"Sunni",
+        "Government Type":"Interim Government",
+        "EU Member":"No",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Liechtenstein",
+        "Capital":"Vaduz",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Lithuania",
+        "Capital":"Vilnius",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Luxembourg",
+        "Capital":"Luxembourg",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Constitutional Monarchy",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Madagascar",
+        "Capital":"Antananarivo",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Malawi",
+        "Capital":"Lilongwe",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Malaysia",
+        "Capital":"Kuala Lumpur",
+        "State Religion":"Sunni",
+        "Government Type":"Federal Parliamentary Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Maldives",
+        "Capital":"Male",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Mali",
+        "Capital":"Bamako",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Malta",
+        "Capital":"Valletta",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Marshall Islands",
+        "Capital":"Majuro",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Mauritania",
+        "Capital":"Nouakchott",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Mauritius",
+        "Capital":"Port Louis",
+        "State Religion":"Hindu",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Mexico",
+        "Capital":"Mexico City",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Micronesia",
+        "Capital":"Palikir",
+        "State Religion":"Christianity",
+        "Government Type":"Federal Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Moldova",
+        "Capital":"Chisinau",
+        "State Religion":"Orthodox",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Monaco",
+        "Capital":"Monaco",
+        "State Religion":"Catholic",
+        "Government Type":"Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Mongolia",
+        "Capital":"Ulaanbaatar",
+        "State Religion":"Buddhism",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Montenegro",
+        "Capital":"Podgorica",
+        "State Religion":"Orthodox",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Morocco",
+        "Capital":"Rabat",
+        "State Religion":"Sunni",
+        "Government Type":"Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Mozambique",
+        "Capital":"Maputo",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Myanmar",
+        "Capital":"Naypyidaw",
+        "State Religion":"Buddhism",
+        "Government Type":"Military Junta",
+        "EU Member":"No",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Namibia",
+        "Capital":"Windhoek",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Nauru",
+        "Capital":"Yaren",
+        "State Religion":"Christianity",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Nepal",
+        "Capital":"Kathmandu",
+        "State Religion":"Hindu",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Netherlands",
+        "Capital":"Amsterdam",
+        "State Religion":"Protestant",
+        "Government Type":"Parliamentary Constitutional Monarchy",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Elector"
+    },
+    {
+        "Country":"New Zealand",
+        "Capital":"Wellington",
+        "State Religion":"Christianity",
+        "Government Type":"Parliamentary Democracy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Nicaragua",
+        "Capital":"Managua",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Niger",
+        "Capital":"Niamey",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Nigeria",
+        "Capital":"Abuja",
+        "State Religion":"Sunni",
+        "Government Type":"Federal Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"North Korea",
+        "Capital":"Pyongyang",
+        "State Religion":"Atheist",
+        "Government Type":"One-Party Communist State",
+        "EU Member":"No",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"North Macedonia",
+        "Capital":"Skopje",
+        "State Religion":"Orthodox",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Norway",
+        "Capital":"Oslo",
+        "State Religion":"Protestant",
+        "Government Type":"Parliamentary Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Oman",
+        "Capital":"Muscat",
+        "State Religion":"Ibadi",
+        "Government Type":"Absolute Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Absolute Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Pakistan",
+        "Capital":"Islamabad",
+        "State Religion":"Sunni",
+        "Government Type":"Federal Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Palau",
+        "Capital":"Ngerulmud",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Palestine",
+        "Capital":"Ramallah",
+        "State Religion":"Sunni",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Panama",
+        "Capital":"Panama City",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Papua New Guinea",
+        "Capital":"Port Moresby",
+        "State Religion":"Christianity",
+        "Government Type":"Parliamentary Constitutional Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Paraguay",
+        "Capital":"Asuncion",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Peru",
+        "Capital":"Lima",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Philippines",
+        "Capital":"Manila",
+        "State Religion":"Catholic",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Poland",
+        "Capital":"Warsaw",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Elector"
+    },
+    {
+        "Country":"Portugal",
+        "Capital":"Lisbon",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Qatar",
+        "Capital":"Doha",
+        "State Religion":"Sunni",
+        "Government Type":"Absolute Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Absolute Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Romania",
+        "Capital":"Bucharest",
+        "State Religion":"Orthodox",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Russia",
+        "Capital":"Moscow",
+        "State Religion":"Orthodox",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Rwanda",
+        "Capital":"Kigali",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"San Marino",
+        "Capital":"San Marino",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Saudi Arabia",
+        "Capital":"Riyadh",
+        "State Religion":"Sunni",
+        "Government Type":"Absolute Monarchy",
+        "EU Member":"No",
+        "EU4 Government":"Absolute Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Senegal",
+        "Capital":"Dakar",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Serbia",
+        "Capital":"Belgrade",
+        "State Religion":"Orthodox",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Seychelles",
+        "Capital":"Victoria",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Sierra Leone",
+        "Capital":"Freetown",
+        "State Religion":"Sunni",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Singapore",
+        "Capital":"Singapore",
+        "State Religion":"Buddhism",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"No",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Slovakia",
+        "Capital":"Bratislava",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"Slovenia",
+        "Capital":"Ljubljana",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Republic",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Republic",
+        "HRE Status":"No"
+    },
+    {
+        "Country":"South Africa",
+        "Capital":"Pretoria",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Spain",
+        "Capital":"Madrid",
+        "State Religion":"Catholic",
+        "Government Type":"Parliamentary Constitutional Monarchy",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Elector"
+    },
+    {
+        "Country":"Sudan",
+        "Capital":"Khartoum",
+        "State Religion":"Sunni",
+        "Government Type":"Military Junta",
+        "EU Member":"No",
+        "EU4 Government":"Despotic Monarchy",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Sweden",
+        "Capital":"Stockholm",
+        "State Religion":"Protestant",
+        "Government Type":"Parliamentary Constitutional Monarchy",
+        "EU Member":"Yes",
+        "EU4 Government":"Constitutional Monarchy",
+        "HRE Status":"Elector"
+    },
+    {
+        "Country":"Switzerland",
+        "Capital":"Bern",
+        "State Religion":"Protestant",
+        "Government Type":"Federal Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Syria",
+        "Capital":"Damascus",
+        "State Religion":"Shia",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    },
+    {
+        "Country":"Zimbabwe",
+        "Capital":"Harare",
+        "State Religion":"Christianity",
+        "Government Type":"Presidential Republic",
+        "EU Member":"No",
+        "EU4 Government":"Administrative Republic",
+        "HRE Status":"Not in HRE"
+    }
+]
