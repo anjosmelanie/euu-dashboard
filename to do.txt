@@ -1,5 +1,4 @@
-For Every Country in the world:
-Correct borders
+do the tasks in to_do_per_country.json
+add countries to EU/HRE
+balance institutions/tech levels based on readme.json
 
-What I have
-- For every country, its government form and main religion

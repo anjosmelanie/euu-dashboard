@@ -1,0 +1,37 @@
+namespace = covid19
+
+country_event = {
+    id = covid19.1
+    title = "covid19.1.t"
+    desc = "covid19.1.d"
+    picture = DEATH
+
+    trigger = {
+        year = 1444
+        owns = 621  # Wuchang
+        NOT = { has_country_flag = covid_outbreak }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    immediate = {
+        set_country_flag = covid_outbreak
+    }
+
+    option = {
+        name = "A mysterious illness begins to spread..."
+        add_unrest = 5
+        add_manpower = -10000
+        diplomats = -2
+        add_country_modifier = {
+            name = "covid_quarantine"
+            duration = 365
+            modifier = {
+                global_tax_modifier = -0.15
+                global_manpower_modifier = -0.25
+            }
+        }
+    }
+}
