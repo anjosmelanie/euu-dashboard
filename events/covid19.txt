@@ -1,15 +1,16 @@
 namespace = covid19
 
+## Main Event
 country_event = {
     id = covid19.1
-    title = "covid19.1.t"
-    desc = "covid19.1.d"
+    title = "covid19.1.title"
+    desc = "covid19.1.description"
     picture = DEATH
 
     trigger = {
-        year = 1444
-        owns = 621  # Wuchang
-        NOT = { has_country_flag = covid_outbreak }
+        is_year = 1444
+        owns = 682
+        # NOT = { has_country_flag = covid_outbreak }  # Uncomment this when done testing
     }
 
     mean_time_to_happen = {
@@ -18,19 +19,56 @@ country_event = {
 
     immediate = {
         set_country_flag = covid_outbreak
+        682 = { 
+            set_province_flag = covid_origin
+        }
     }
 
     option = {
-        name = "A mysterious illness begins to spread..."
+        name = covid19.1.a  # Quarantine Province
         add_unrest = 5
-        add_manpower = -10000
-        diplomats = -2
+        add_manpower = -3
+
+        682 = {
+            set_province_flag = infected_province
+            add_province_modifier = {
+                name = covid_local_quarantine
+                duration = 180
+            }
+        }
+    }
+
+    option = {
+        name = covid19.1.b  # Quarantine Country
+        add_unrest = 3
+        add_manpower = -10
+
+        682 = {
+            set_province_flag = infected_province
+            add_province_modifier = {
+                name = covid_local_quarantine
+                duration = 180
+            }
+        }
+
         add_country_modifier = {
-            name = "covid_quarantine"
+            name = covid_quarantine_nationwide
             duration = 365
-            modifier = {
-                global_tax_modifier = -0.15
-                global_manpower_modifier = -0.25
+        }
+    }
+
+    option = {
+        name = covid19.1.c  # Ignore It
+        add_unrest = 8
+        add_manpower = -2
+        add_stability = -1
+        add_corruption = 1
+
+        682 = {
+            set_province_flag = infected_province
+            add_province_modifier = {
+                name = covid_local_quarantine
+                duration = 180
             }
         }
     }

@@ -1,0 +1,5 @@
+covid_quarantine_nationwide = {
+    global_tax_modifier = -0.20
+    global_manpower_modifier = -0.30
+    stability_cost_modifier = 0.25
+}

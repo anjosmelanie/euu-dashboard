@@ -1,0 +1,4 @@
+covid_local_quarantine = {
+    local_tax_modifier = -0.20
+    local_manpower_modifier = -0.30
+}
