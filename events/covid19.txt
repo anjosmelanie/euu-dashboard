@@ -1,6 +1,6 @@
 namespace = covid19
 
-## Main Event
+## Origin Event
 country_event = {
     id = covid19.1
     title = "covid19.1.title"
@@ -8,9 +8,9 @@ country_event = {
     picture = DEATH
 
     trigger = {
-        is_year = 1444
+        is_year = 1444 # change to 1449 so i can tie it to institution
         owns = 682
-        # NOT = { has_country_flag = covid_outbreak }  # Uncomment this when done testing
+        NOT = { has_country_flag = covid_outbreak }
     }
 
     mean_time_to_happen = {
@@ -19,6 +19,7 @@ country_event = {
 
     immediate = {
         set_country_flag = covid_outbreak
+        set_country_flag = covid_alerted
         682 = { 
             set_province_flag = covid_origin
         }
@@ -26,50 +27,91 @@ country_event = {
 
     option = {
         name = covid19.1.a  # Quarantine Province
-        add_unrest = 5
-        add_manpower = -3
+        add_treasury = -50
 
         682 = {
             set_province_flag = infected_province
             add_province_modifier = {
+                name = covid_infection
+                duration = 3650
+            }
+            add_province_modifier = {
                 name = covid_local_quarantine
-                duration = 180
+                duration = 3650
             }
         }
     }
 
     option = {
         name = covid19.1.b  # Quarantine Country
-        add_unrest = 3
-        add_manpower = -10
+        add_treasury = -100
+        add_stability = -1
 
         682 = {
             set_province_flag = infected_province
             add_province_modifier = {
-                name = covid_local_quarantine
-                duration = 180
+                name = covid_infection
+                duration = 3650
             }
         }
 
         add_country_modifier = {
             name = covid_quarantine_nationwide
-            duration = 365
+            duration = 3650
         }
     }
 
     option = {
         name = covid19.1.c  # Ignore It
-        add_unrest = 8
-        add_manpower = -2
-        add_stability = -1
         add_corruption = 1
 
         682 = {
             set_province_flag = infected_province
             add_province_modifier = {
-                name = covid_local_quarantine
-                duration = 180
+                name = covid_infection
+                duration = 3650
             }
         }
+    }
+}
+
+## New Country Event
+country_event = {
+    id = covid19.4
+    title = "covid19.4.title"
+    desc = "covid19.4.desc"
+    picture = DEATH
+
+    trigger = {
+        has_country_flag = covid_alerted
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    immediate = {
+        every_owned_province = {
+            limit = { has_province_flag = infected_province }
+
+            random_neighbor_province = {
+                limit = {
+                    NOT = { has_province_flag = infected_province }
+                }
+                set_province_flag = infected_province
+                add_province_modifier = {
+                    name = covid_infection
+                    duration = 3650
+                }
+                #owner = {
+                #    country_event = { id = covid19.3 }
+                #}
+            }
+        }
+    }
+
+    option = {
+        name = covid19.4.a
+        ai_chance = { factor = 100 }
     }
 }

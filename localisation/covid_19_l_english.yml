@@ -5,11 +5,14 @@
  covid19.1.b: "Quarantine the whole country"
  covid19.1.c: "Ignore it for now..."
 
- covid_quarantine_province: "Capital Quarantine"
- covid_quarantine_province_desc: "A targeted quarantine around the capital is meant to contain the disease, though it disrupts governance and recruiting efforts."
+ covid19.2.title: "It is spreading..."
+ covid19.2.description: "The strange illness is spreading to neighboring provinces..."
+ covid19.2.a: "What do you want me to do about it?"
+ covid19.2.b: "We should really quarantine the country..."
 
- covid_quarantine_nationwide: "National Quarantine"
- covid_quarantine_nationwide_desc: "Sweeping restrictions across the country aim to halt the spread of the illness, at great administrative and economic cost."
+ covid19.3.title: "Our lands Are infected"
+ covid19.3.description: "One of our provinces has been struck a mysterious illness that began abroad. We must consider quarantine measures immediately."
 
- covid19.debug.t: "Modifier Test"
- covid19.debug.d: "Applying quarantine to a random owned province..."
+ covid19.4.title: "The Illness Spreads"
+ covid19.4.desc: "Despite our efforts, the disease continues to spread across our lands."
+ covid19.4.a: "What do you want me to do about it?"

@@ -1,0 +1,68 @@
+## Spreader Event
+province_event = {
+    id = covid19.2
+    title = "covid19.2.title"
+    desc = "covid19.2.description"
+    picture = DEATH
+    is_triggered_only = yes
+
+    trigger = {
+        has_province_flag = infected_province
+    }
+
+    immediate = {
+        random_neighbor_province = {
+            limit = {
+                NOT = { has_province_flag = infected_province }
+            }
+            set_province_flag = infected_province
+            add_province_modifier = {
+                name = covid_infection
+                duration = 3650
+            }
+            owner = {
+                country_event = { id = covid19.3 }
+            }
+        }
+    }
+
+    option = {
+        name = covid19.2.a
+        add_corruption = 2
+    }
+
+    option = {
+        name = covid19.2.b
+        add_treasury = -100
+        add_stability = -1
+
+        add_country_modifier = {
+            name = covid_quarantine_nationwide
+            duration = 3650
+        }
+    }
+}
+
+
+## Infection Notification
+country_event = {
+    id = covid19.3
+    title = "covid19.3.title"
+    desc = "covid19.3.description"
+    picture = DEATH
+
+    trigger = {
+        has_province_with = {
+            has_province_flag = infected_province
+        }
+        NOT = { has_country_flag = covid_alerted }
+    }
+
+    immediate = {
+        set_country_flag = covid_alerted
+    }
+
+    option = {
+        name = "We must act fast!"
+    }
+}
