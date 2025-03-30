@@ -59,10 +59,12 @@ country_event = {
     }
 
     immediate = {
+        clr_country_flag = newly_infected
         set_country_flag = covid_alerted
     }
 
     option = {
-        name = "We must act fast!"
+        name = covid19.3.a  
+        ai_chance = { factor = 100 }
     }
 }

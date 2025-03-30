@@ -87,31 +87,225 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 6
+        days = 6
     }
 
     immediate = {
         every_owned_province = {
             limit = { has_province_flag = infected_province }
 
-            random_neighbor_province = {
-                limit = {
-                    NOT = { has_province_flag = infected_province }
+            random_list = {
+                50 = {  # NEIGHBORING SPREAD
+                    random_neighbor_province = {
+                        limit = {
+                            NOT = { has_province_flag = infected_province }
+                        }
+
+                        set_province_flag = infected_province
+
+                        add_province_modifier = {
+                            name = covid_infection
+                            duration = 3650
+                        }
+
+                        owner = {
+                            if = {
+                                limit = {
+                                    NOT = { has_country_flag = covid_alerted }
+                                }
+
+                                set_country_flag = newly_infected
+                                set_country_flag = covid_alerted
+                            }
+                        }
+                    }
                 }
-                set_province_flag = infected_province
-                add_province_modifier = {
-                    name = covid_infection
-                    duration = 3650
+
+                35 = {  # INTERNAL SPREAD
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_flag = infected_province }
+                        }
+
+                        set_province_flag = infected_province
+
+                        add_province_modifier = {
+                            name = covid_infection
+                            duration = 3650
+                        }
+
+                        owner = {
+                            if = {
+                                limit = {
+                                    NOT = { has_country_flag = covid_alerted }
+                                }
+
+                                set_country_flag = newly_infected
+                                set_country_flag = covid_alerted
+                            }
+                        }
+                    }
                 }
-                #owner = {
-                #    country_event = { id = covid19.3 }
-                #}
+
+                20 = {  # ALLY SPREAD
+                    random_country = {
+                        limit = {
+                            # is_ally = ROOT
+                            any_owned_province = {
+                                NOT = { has_province_flag = infected_province }
+                            }
+                        }
+
+                        random_owned_province = {
+                            limit = {
+                                NOT = { has_province_flag = infected_province }
+                            }
+
+                            set_province_flag = infected_province
+
+                            add_province_modifier = {
+                                name = covid_infection
+                                duration = 3650
+                            }
+
+                            owner = {
+                                if = {
+                                    limit = {
+                                        NOT = { has_country_flag = covid_alerted }
+                                    }
+
+                                    set_country_flag = newly_infected
+                                    set_country_flag = covid_alerted
+                                }
+                            }
+                        }
+                    }
+                }
             }
+        }
+
+        # Trigger the country alert once per newly infected country
+        every_country = {
+            limit = {
+                has_country_flag = newly_infected
+            }
+
+            country_event = { id = covid19.3 }
+            clr_country_flag = newly_infected
         }
     }
 
     option = {
         name = covid19.4.a
         ai_chance = { factor = 100 }
+    }
+}
+
+## Stats for Debug
+country_event = {
+    id = covid19.stats
+    title = "covid19.stats.title"
+    desc = "covid19.stats.desc"
+    picture = DEATH
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            set_variable = { which = covid_province_count value = 0 }
+            set_variable = { which = covid_country_count value = 0 }
+        }
+
+        every_country = {
+            limit = {
+                any_owned_province = {
+                    has_province_flag = infected_province
+                }
+            }
+
+            hidden_effect = {
+                change_variable = { which = covid_country_count value = 1 }
+            }
+
+            every_owned_province = {
+                limit = {
+                    has_province_flag = infected_province
+                }
+                
+                hidden_effect = {
+                    change_variable = { which = covid_province_count value = 1 }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = covid19.stats.a
+    }
+}
+
+
+## New Country infected
+country_event = {
+    id = covid19.3
+    title = "covid19.3.title"
+    desc = "covid19.3.desc"
+    picture = DEATH
+    is_triggered_only = yes
+
+    immediate = {
+        set_country_flag = covid_alerted
+
+        # Assumes the province calling this event is the infected one
+        event_target:infected_province = {
+            set_province_flag = infected_province
+        }
+
+        set_province_event_target = infected_province
+    }
+
+    option = {
+        name = covid19.3.a  # Quarantine the province
+        add_treasury = -50
+
+        event_target:infected_province = {
+            add_province_modifier = {
+                name = covid_infection
+                duration = 3650
+            }
+            add_province_modifier = {
+                name = covid_local_quarantine
+                duration = 3650
+            }
+        }
+    }
+
+    option = {
+        name = covid19.3.b  # Quarantine the country
+        add_treasury = -100
+        add_stability = -1
+
+        event_target:infected_province = {
+            add_province_modifier = {
+                name = covid_infection
+                duration = 3650
+            }
+        }
+
+        add_country_modifier = {
+            name = covid_quarantine_nationwide
+            duration = 3650
+        }
+    }
+
+    option = {
+        name = covid19.3.c  # Ignore it
+        add_corruption = 1
+
+        event_target:infected_province = {
+            add_province_modifier = {
+                name = covid_infection
+                duration = 3650
+            }
+        }
     }
 }
