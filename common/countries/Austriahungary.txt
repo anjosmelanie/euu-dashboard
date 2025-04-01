@@ -2,7 +2,7 @@
 
 graphical_culture = westerngfx
 
-color = { 220  220  220 }
+color = { 239  239  239 }
 
 revolutionary_colors = { 5  0  5 }
 
@@ -124,6 +124,23 @@ leader_names = {
 	Minucci Sulerzycki Stichsenstein Hagedorn Arenberg
 	Boroewitsch Steiger Tegethoff Buseck Byszynski Zwerger
 	Casper "von Schönbrunn" Poll "von Schwarzenberg"
+	Andrássy Alvinczy
+	Bocskay Bethlen Báthory Batthyány Benovský Beleznay
+	Csák
+	Dessewffy
+	Esterházy
+	Festetics Frangepán
+	Garay
+	Hunyadi Hadik Horthy
+	Kinizsi Károlyi Kán "de Kovats" Kemeny
+	Lackovic' Losonci
+	Mészáros Milványi
+	Nadasdy
+	Ozoray
+	Rákóczi Rozgonyi
+	Šubic' Széchenyi
+	Thököly Teleki
+	Zrinski Zápolya Zichy
 }
 
 ship_names = {
@@ -142,6 +159,14 @@ army_names = {
 
 fleet_names = {
 	"Adriatik Flotte" "Habsburgische Flotte" "Kaiserliche Flotte"
+	Aranybulla 
+	Arpad
+	Magyar
+	Sigismund
+	"Szent Istvan kiraly"
+	"Hunyadi Matyas"
+	"Karoly Robert"
+	"Nagy Lajos"
+	Laszlo
+	Kalman
 }
-
-

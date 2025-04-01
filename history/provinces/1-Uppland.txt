@@ -1,8 +1,8 @@
 #Uppland, contains Stockholm, Uppsala & Nyköping.
 
-add_core = ANK
-owner = ANK
-controller = ANK
+add_core = SWE
+owner = SWE
+controller = SWE
 culture = swedish
 religion = catholic
 hre = no
