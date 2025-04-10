@@ -30,12 +30,14 @@
           Country name:
           <input type="text" id="name" required>
         </label>
+
         <!-- Country Tag (for the file title)-->
         <label>
           Country tag:
           <input type="text" id="tag" maxlength="3" required>
         </label>
-         <!-- Government (for the file title)-->
+
+         <!-- Government -->
         <label for="government">Government:</label>
         <select id="government" required>
           <option value="">-- Please choose a government type --</option>
@@ -48,11 +50,13 @@
           <option value="nomad">nomad</option>
           <option value="papacy">papacy</option>
         </select>
+
         <!-- Government reform (in script)-->
         <label for="government-reform">Government reform:</label>
         <select id="government-reform">
           <option value="">-- Select a government reform --</option>
         </select>
+
         <!-- Technology group -->
         <label for="technology-group">Government:</label>
         <select id="technology-group" required>
@@ -75,6 +79,7 @@
           <option value="aboriginal">aboriginal</option>
           <option value="polynesian">polynesian</option>
         </select>
+
         <!-- Religion -->
         <label for="religion">Religion:</label>
         <select id="religion" required>
@@ -108,6 +113,7 @@
           <option value="jewish">Jewish</option>
           <option value="zoroastrian">Zoroastrian</option>
         </select>
+
         <!-- Religious school (in script)-->
         <div id="schoolWrapper" style="display: none; margin-top: 1rem;">
           <label for="religious-school">Religious school:</label>
@@ -115,6 +121,88 @@
             <option value="">-- Select a religious school --</option>
           </select>
         </div>
+
+        <!-- Culture Group (enabler for primary culture dropdown) -->
+        <label for="culture-group">Government:</label>
+        <select id="culture-group" required>
+          <option value="">-- Please choose a culture group --</option>
+          <option value="Aboriginal">Aboriginal</option>
+          <option value="Altaic">Altaic</option>
+          <option value="Andean">Andean</option>
+          <option value="Apachean">Apachean</option>
+          <option value="Araucanian">Araucanian</option>
+          <option value="Aridoamerican">Aridoamerican</option>
+          <option value="Baltic">Baltic</option>
+          <option value="British">British</option>
+          <option value="Burman">Burman</option>
+          <option value="Byzantine">Byzantine</option>
+          <option value="Caddoan">Caddoan</option>
+          <option value="Caribbean">Caribbean</option>
+          <option value="Carpathian">Carpathian</option>
+          <option value="Caucasian">Caucasian</option>
+          <option value="Celtic">Celtic</option>
+          <option value="Central Algonquian">Central Algonquian</option>
+          <option value="Central American">Central American</option>
+          <option value="Central Indian">Central Indian</option>
+          <option value="Chibchan">Chibchan</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Cushitic">Cushitic</option>
+          <option value="Dravidian">Dravidian</option>
+          <option value="East Bantu">East Bantu</option>
+          <option value="Eastern Algonquian">Eastern Algonquian</option>
+          <option value="Eastern Aryan">Eastern Aryan</option>
+          <option value="East Slavic">East Slavic</option>
+          <option value="Eskaleut">Eskaleut</option>
+          <option value="Evenki">Evenki</option>
+          <option value="French">French</option>
+          <option value="Germanic">Germanic</option>
+          <option value="Great Lakes">Great Lakes</option>
+          <option value="Iberian">Iberian</option>
+          <option value="Iranian">Iranian</option>
+          <option value="Iroquoian">Iroquoian</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Je">Je</option>
+          <option value="Kamchatkan">Kamchatkan</option>
+          <option value="Kongo">Kongo</option>
+          <option value="Korean">Korean</option>
+          <option value="Latin">Latin</option>
+          <option value="Levantine">Levantine</option>
+          <option value="Lost Cultures">Lost Cultures</option>
+          <option value="Maghrebi">Maghrebi</option>
+          <option value="Malay">Malay</option>
+          <option value="Mande">Mande</option>
+          <option value="Marañón">Marañón</option>
+          <option value="Matacoan">Matacoan</option>
+          <option value="Mayan">Mayan</option>
+          <option value="Mon-Khmer">Mon-Khmer</option>
+          <option value="Muskogean">Muskogean</option>
+          <option value="Na-Déné">Na-Déné</option>
+          <option value="Nordic">Nordic</option>
+          <option value="Otomanguean">Otomanguean</option>
+          <option value="Pacific">Pacific</option>
+          <option value="Penutian">Penutian</option>
+          <option value="Plains Algonquian">Plains Algonquian</option>
+          <option value="Sahelian">Sahelian</option>
+          <option value="Slavic">Slavic</option>
+          <option value="Sonoran">Sonoran</option>
+          <option value="Southern African">Southern African</option>
+          <option value="South Slavic">South Slavic</option>
+          <option value="Sudanese">Sudanese</option>
+          <option value="Tai">Tai</option>
+          <option value="Tatar">Tatar</option>
+          <option value="Tibetan">Tibetan</option>
+          <option value="Tupi">Tupi</option>
+          <option value="Ugric">Ugric</option>
+          <option value="West African">West African</option>
+          <option value="Western Aryan">Western Aryan</option>
+          <option value="West Slavic">West Slavic</option>
+        </select>
+
+        <!-- Primary Culture (in script)-->
+        <label for="primary-culture">Primary Culture:</label>
+        <select id="primary-culture">
+          <option value="">-- Select a primary culture --</option>
+        </select>
 
         <!-- Create File button and end of the form -->
         <button type="submit">Create</button>

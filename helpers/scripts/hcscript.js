@@ -7,6 +7,8 @@ const governmentReformSelect = document.getElementById('government-reform');
 const technologyGroupSelect = document.getElementById('technology-group');
 const religionSelect = document.getElementById('religion');
 const religiousSchoolSelect = document.getElementById('religious-school');
+const cultureGroupSelect = document.getElementById('culture-group');
+const primaryCultureSelect = document.getElementById('primary-culture');
 
 // Hidden fields wrappers
 const religiousSchoolWrapper = document.getElementById('schoolWrapper');
@@ -39,6 +41,10 @@ religionSelect.addEventListener('input', () => {
 
 religiousSchoolSelect.addEventListener('input', () => {
     document.getElementById('previewSchool').textContent = religiousSchoolSelect.value || '-';
+});
+
+primaryCultureSelect.addEventListener('input', () => {
+    document.getElementById('previewCulture').textContent = primaryCultureSelect.value || '-';
 });
 
 // End of fields preview
@@ -100,5 +106,94 @@ religionSelect.addEventListener('change', () => {
         option.textContent = school;
         religiousSchoolSelect.appendChild(option);
     });
+  });
 
+// Culture Group dropdown
+  const primaryCultureOptions = {
+    "Aboriginal": ["Gamilaraay", "Gunwinyguan", "Kulin", "Kuric", "Nyoongah", "Palawa", "Paman", "Yura"],
+    "Altaic": [],
+    "Andean": [],
+    "Apachean": [],
+    "Araucanian": [],
+    "Aridoamerican": [],
+    "Baltic": [],
+    "British": [],
+    "Burman": [],
+    "Byzantine": [],
+    "Caddoan": [],
+    "Caribbean": [],
+    "Carpathian": [],
+    "Caucasian": [],
+    "Celtic": [],
+    "Central Algonquian": [],
+    "Central American": [],
+    "Central Indian": [],
+    "Chibchan": [],
+    "Chinese": [],
+    "Cushitic": [],
+    "Dravidian": [],
+    "East Bantu": [],
+    "Eastern Algonquian": [],
+    "Eastern Aryan": [],
+    "East Slavic": [],
+    "Eskaleut": [],
+    "Evenki": [],
+    "French": [],
+    "Germanic": [],
+    "Great Lakes": [],
+    "Iberian": [],
+    "Iranian": [],
+    "Iroquoian": [],
+    "Japanese": [],
+    "Je": [],
+    "Kamchatkan": [],
+    "Kongo": [],
+    "Korean": [],
+    "Latin": [],
+    "Levantine": [],
+    "Lost Cultures": [],
+    "Maghrebi": [],
+    "Malay": [],
+    "Mande": [],
+    "Marañón": [],
+    "Matacoan": [],
+    "Mayan": [],
+    "Mon-Khmer": [],
+    "Muskogean": [],
+    "Na-Déné": [],
+    "Nordic": [],
+    "Otomanguean": [],
+    "Pacific": [],
+    "Penutian": [],
+    "Plains Algonquian": [],
+    "Sahelian": [],
+    "Slavic": [],
+    "Sonoran": [],
+    "Southern African": [],
+    "South Slavic": [],
+    "Sudanese": [],
+    "Tai": [],
+    "Tatar": [],
+    "Tibetan": [],
+    "Tupi": [],
+    "Ugric": [],
+    "West African": [],
+    "Western Aryan": [],
+    "West Slavic": []
+  };
+
+  cultureGroupSelect.addEventListener('change', () => {
+    const selectedCultureGroup = cultureGroupSelect.value;
+    const cultures = primaryCultureOptions[selectedCultureGroup] || [];
+  
+    // Clear current template options
+    primaryCultureSelect.innerHTML = '<option value="">-- Select a primary culture --</option>';
+  
+    // Populate new ones
+    cultures.forEach(culture => {
+      const option = document.createElement('option');
+      option.value = culture.toLowerCase().replace(/\s+/g, '-'); // make safe value
+      option.textContent = culture;
+      primaryCultureSelect.appendChild(option);
+    });
   });
