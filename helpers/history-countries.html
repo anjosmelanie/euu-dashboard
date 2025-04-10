@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EUU history/countries helper</title>
-<!----><link rel="stylesheet" href="styles.css"> <!-- Optional: Link to a CSS file -->
-<!----><script src="script.js"></script> <!-- Optional: Link to a JS file -->
+  <link rel="stylesheet" href="styles/styles.css"> 
 </head>
 <body>
   <header>
@@ -21,14 +20,138 @@
     </ul>
   </nav>
 
-  <main>
-    <p>This is the main content of the page.</p>
-  </main>
+  <div class="container">
+    <!-- Left column: the form -->
+    <div class="form-column">
+      <h2>Create a country file:</h2>
+      <form id="dataForm">
+        <!-- Country Name (for the file title)-->
+        <label>
+          Country name:
+          <input type="text" id="name" required>
+        </label>
+        <!-- Country Tag (for the file title)-->
+        <label>
+          Country tag:
+          <input type="text" id="tag" maxlength="3" required>
+        </label>
+         <!-- Government (for the file title)-->
+        <label for="government">Government:</label>
+        <select id="government" required>
+          <option value="">-- Please choose a government type --</option>
+          <option value="monarchy">monarchy</option>
+          <option value="republic">republic</option>
+          <option value="religion">religion</option>
+          <option value="tribal">tribal</option>
+          <option value="monastic">monastic</option>
+          <option value="dictatorship">dictatorship</option>
+          <option value="nomad">nomad</option>
+          <option value="papacy">papacy</option>
+        </select>
+        <!-- Government reform (in script)-->
+        <label for="government-reform">Government reform:</label>
+        <select id="government-reform">
+          <option value="">-- Select a government reform --</option>
+        </select>
+        <!-- Technology group -->
+        <label for="technology-group">Government:</label>
+        <select id="technology-group" required>
+          <option value="">-- Please choose a technology group --</option>
+          <option value="western">western</option>
+          <option value="high american">high american</option>
+          <option value="eastern">eastern</option>
+          <option value="anatolian">anatolian</option>
+          <option value="muslim">muslim</option>
+          <option value="indian">indian</option>
+          <option value="chinese">chinese</option>
+          <option value="east african">east african</option>
+          <option value="west african">west african</option>
+          <option value="central african">central african</option>
+          <option value="nomadic">nomadic</option>
+          <option value="mesoamerican">mesoamerican</option>
+          <option value="andean">andean</option>
+          <option value="north american">north american</option>
+          <option value="south american">south american</option>
+          <option value="aboriginal">aboriginal</option>
+          <option value="polynesian">polynesian</option>
+        </select>
+        <!-- Religion -->
+        <label for="religion">Religion:</label>
+        <select id="religion" required>
+          <option value="">-- Select a religion --</option>
+          <option value="catholic">Catholic</option>
+          <option value="protestant">Protestant</option>
+          <option value="reformed">Reformed</option>
+          <option value="orthodox">Orthodox</option>
+          <option value="coptic">Coptic</option>
+          <option value="anglican">Anglican</option>
+          <option value="hussite">Hussite</option>
+          <option value="sunni">Sunni</option>
+          <option value="shia">Shia</option>
+          <option value="ibadi">Ibadi</option>
+          <option value="mahayana">Mahayana</option>
+          <option value="theravada">Theravada</option>
+          <option value="vajrayana">Vajrayana</option>
+          <option value="confucian">Confucian</option>
+          <option value="shinto">Shinto</option>
+          <option value="animist">Animist</option>
+          <option value="fetishist">Fetishist</option>
+          <option value="totemist">Totemist</option>
+          <option value="inti">Inti</option>
+          <option value="mayan">Mayan</option>
+          <option value="nahuatl">Nahuatl</option>
+          <option value="tengri">Tengri</option>
+          <option value="norse">Norse</option>
+          <option value="alcheringa">Alcheringa</option>
+          <option value="hindu">Hindu</option>
+          <option value="sikh">Sikh</option>
+          <option value="jewish">Jewish</option>
+          <option value="zoroastrian">Zoroastrian</option>
+        </select>
+        <!-- Religious school (in script)-->
+        <div id="schoolWrapper" style="display: none; margin-top: 1rem;">
+          <label for="religious-school">Religious school:</label>
+          <select id="religious-school">
+            <option value="">-- Select a religious school --</option>
+          </select>
+        </div>
+
+        <!-- Create File button and end of the form -->
+        <button type="submit">Create</button>
+      </form>
+    </div>
+
+    <!-- Right column: live preview -->
+    <div class="preview-column">
+      <h2>File Preview</h2>
+      <h3><span id="previewTag">-</span> - <span id="previewName">-</span></h3>
+      <div class="preview-box">
+          <p><strong>government = </strong> <span id="previewGovernment">-</span></p>
+          <p><strong>add_government_reform = </strong> <span id="previewReform">-</span></p>
+          <p><strong>government_rank = 1</p>
+          <p><strong>mercantilism = 25</p>
+          <p><strong>technology_group = </strong> <span id="previewTechnology">-</span></p>
+          <p><strong>religion = </strong> <span id="previewReligion">-</span></p>
+          <p><strong>religious_school = </strong> <span id="previewSchool">-</span></p>
+          <p><strong>primary_culture = </strong> <span id="previewCulture">-</span></p>
+          <p><strong>add_accepted_culture = </strong> <span id="previewAccepted">-</span></p>
+          <p><strong>historical_friend = </strong> <span id="previewFriend">-</span></p>
+          <p><strong>capital = </strong> <span id="previewCapital">-</span></p>
+      </div>
+    </div>
+  </div>
+
 
   <footer>
     <p>&copy; 2025 anjosmelanie</p>
   </footer>
 
-  
+  <script src="scripts/hcscript.js"></script> 
 </body>
 </html>
+
+<!-- TO DO: Checkbox for capital is fixed that will create extra entry in file fidex_capital -->
+<!-- TO DO: Allow to add accepted cultures (button) -->
+<!-- TO DO: Allow to add historical friend (button) -->
+<!-- TO DO: Allow to create monarch and heir -->
+<!-- TO DO: Upload an existing file and fill all the fields on it, allowing to edit them -->
