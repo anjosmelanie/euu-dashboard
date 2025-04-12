@@ -22,13 +22,14 @@ function updatePreviewFromForm() {
   const data = getCurrentFormData(); // your form reader function
   const previewText = generateCountryPreviewText(data); // the one we made earlier
   document.getElementById('preview-box').textContent = previewText;
+  document.getElementById('file-name').value = data.fileName;
 }
 
 //Any change anywhere in the form triggers the preview update
 document.getElementById('form-section').addEventListener('input', updatePreviewFromForm);
 
 // Save changes to local storage
-document.getElementById('reload-preview').addEventListener('click', console.log(getCurrentFormData));
+document.getElementById('reload-preview').addEventListener('click', updatePreviewFromForm);
 document.getElementById('save-country').addEventListener('click', saveCurrentHistoryCountry);
 document.getElementById('download-country').addEventListener('click', () => {
   saveCurrentHistoryCountry();
@@ -156,8 +157,11 @@ religionSelect.addEventListener('change', () => {
       const selectedGroup = cultureGroupSelect.value;
       const cultures = CULTURE_OPTIONS[selectedGroup] || [];
       populateSelect(cultureSelect, cultures, '-- Select CULture --');
+      console.log(cultures);
     });
   
+
+
     // Create remove button
     const removeButton = createRemoveButton(wrapper);
   
@@ -322,9 +326,9 @@ religionSelect.addEventListener('change', () => {
   
     culturePairs.forEach(pair => {
       const group = pair.querySelector('select[name^="acceptedCultureGroup"]');
-      const culture = pair.querySelector('select[name^="acceptedCulture"]');
+      const culture = pair.querySelector('select[name^="acceptedCulture"]:not([name^="acceptedCultureGroup"])');
   
-      if (group?.value && culture?.value) {
+      if ( group?.value && culture?.value ) {
         acceptedCultures.push({
           group: group.value,
           culture: culture.value
@@ -374,14 +378,17 @@ religionSelect.addEventListener('change', () => {
       
       const wrapper = addAcceptedCulture(); // assumes it returns the created element
       const groupSelect = wrapper.querySelector('select[name^="acceptedCultureGroup"]');
-      const cultureSelect = wrapper.querySelector('select[name^="acceptedCulture"]');
+      const cultureSelect = wrapper.querySelector('select[name^="acceptedCulture"]:not([name^="acceptedCultureGroup"])');
   
+      console.log(culture);
       groupSelect.value = group;
-      groupSelect.dispatchEvent(new Event('change')); // to trigger culture options
-  
+      groupSelect.dispatchEvent(new Event('change'));
+
+      // Give the event a moment to populate the dropdown
       setTimeout(() => {
         cultureSelect.value = culture;
-      }, 150);
+      }, 50); // if 50ms is flaky, bump it up a bit
+      cultureSelect.value = culture;
     });
   }
 
@@ -529,12 +536,16 @@ religionSelect.addEventListener('change', () => {
     let lines = [];
   
     lines.push(`government = ${data.government}`);
-    lines.push(`add_government_reform = ${data.governmentreform}`); //TODO: Make conditional
+    if (data.governmentreform) {
+      lines.push(`add_government_reform = ${data.governmentreform}`);
+    }
     lines.push(`government_rank = 1`);
     lines.push(`mercantilism = 25`);
     lines.push(`technology_group = ${data.technologygroup}`);
     lines.push(`religion = ${data.religion}`);
-    lines.push(`religious_school = ${data.religiousschool || '-'}`); //TODO: Make conditional
+    if (data.religiousschool) {
+      lines.push(`religious_school = ${data.religiousschool}`);
+    }
     lines.push(`primary_culture = ${data.primaryculture}`);
   
     (data.acceptedCultures || []).forEach(({ culture }) =>
