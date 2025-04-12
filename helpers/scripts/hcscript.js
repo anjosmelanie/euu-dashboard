@@ -1,7 +1,7 @@
 // Imports from other js files
 import { CULTURE_OPTIONS, TRIGGER_RELIGIONS, RELIGIOUS_SCHOOL_OPTIONS, GOVERNMENT_REFORM_OPTIONS,
    TECHNOLOGY_GROUPS, RELIGIONS } from './constants.js';
-import { defaultOption, populateSelect, makeUppercaseOnInput } from './utils.js';
+import { defaultOption, populateSelect, makeUppercaseOnInput, downloadFile } from './utils.js';
 
 // Constants for history/countries
 const nameInput = document.getElementById('country-name');
@@ -23,46 +23,12 @@ const religiousSchoolWrapper = document.getElementById('schoolWrapper');
 
 // Save changes to local storage
 document.getElementById('save-country').addEventListener('click', saveCurrentHistoryCountry);
-
-document.querySelectorAll('input, select').forEach(el => {
-  //el.addEventListener('change', saveCurrentHistoryCountry);
+document.getElementById('download-country').addEventListener('click', () => {
+  saveCurrentHistoryCountry();
+  //const data = getCurrentFormData();
+  //const text = generateCountryFileText(data);
+  downloadFile({ fileName: data.fileName, text });
 });
-
-// Fields for Preview
-nameInput.addEventListener('input', () => {
-  document.getElementById('previewName').textContent = nameInput.value || '-';
-});
-
-tagInput.addEventListener('input', () => {
-  tagInput.value = tagInput.value.toUpperCase();
-  document.getElementById('previewTag').textContent = (tagInput.value).toUpperCase() || '-';
-});
-
-governmentSelect.addEventListener('input', () => {
-  document.getElementById('previewGovernment').textContent = governmentSelect.value || '-';
-});
-
-governmentReformSelect.addEventListener('input', () => {
-    document.getElementById('previewReform').textContent = governmentReformSelect.value || '-';
-});
-
-technologyGroupSelect.addEventListener('input', () => {
-    document.getElementById('previewTechnology').textContent = technologyGroupSelect.value || '-';
-});
-
-religionSelect.addEventListener('input', () => {
-    document.getElementById('previewReligion').textContent = religionSelect.value || '-';
-});
-
-religiousSchoolSelect.addEventListener('input', () => {
-    document.getElementById('previewSchool').textContent = religiousSchoolSelect.value || '-';
-});
-
-primaryCultureSelect.addEventListener('input', () => {
-    document.getElementById('previewCulture').textContent = primaryCultureSelect.value || '-';
-});
-
-// End of fields preview
 
 // Prevent form submission (for now)
 document.getElementById('dataForm').addEventListener('submit', e => {
@@ -441,7 +407,7 @@ religionSelect.addEventListener('change', () => {
   }
 
   function populateSavedCountries() {
-    const select = document.getElementById('savedCountriesSelect');
+    const select = document.getElementById('save-manager');
     select.innerHTML = '<option value="">-- Load a saved country --</option>';
     const all = JSON.parse(localStorage.getItem('euuHistoryCountriesForms')) || {};
   
@@ -459,3 +425,105 @@ religionSelect.addEventListener('change', () => {
   });
   
   populateSavedCountries(); // call this on page load
+
+  function renderSaveManager() {
+    const container = document.getElementById('save-manager');
+    container.innerHTML = '';
+  
+    const saves = JSON.parse(localStorage.getItem('euuHistoryCountriesForms')) || {};
+    const keys = Object.keys(saves);
+  
+    if (keys.length === 0) {
+      container.textContent = "No saved countries yet...";
+      return;
+    }
+  
+    keys.forEach(key => {
+      const entry = document.createElement('div');
+      entry.classList.add('save-entry');
+  
+      const label = document.createElement('span');
+      label.textContent = key;
+  
+      const loadBtn = document.createElement('button');
+      loadBtn.textContent = '📂';
+      loadBtn.title = 'Load';
+      loadBtn.addEventListener('click', () => loadCountry(key));
+  
+      const deleteBtn = document.createElement('button');
+      deleteBtn.textContent = '🗑️';
+      deleteBtn.title = 'Delete';
+      deleteBtn.addEventListener('click', () => {
+        if (confirm(`Delete "${key}"?`)) {
+          deleteSave(key);
+          renderSaveManager();
+        }
+      });
+  
+      entry.appendChild(label);
+      entry.appendChild(loadBtn);
+      entry.appendChild(deleteBtn);
+      container.appendChild(entry);
+    });
+  }
+
+  function deleteSave(key) {
+    const saves = JSON.parse(localStorage.getItem('euuHistoryCountriesForms')) || {};
+    delete saves[key];
+    localStorage.setItem('euuHistoryCountriesForms', JSON.stringify(saves));
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    renderSaveManager();
+  });
+
+  function getCurrentFormData() {
+    return {
+      name: document.getElementById('country-name').value,
+      tag: document.getElementById('country-tag').value.toUpperCase(),
+      government: document.getElementById('government').value,
+      governmentreform: document.getElementById('government-reform').value,
+      technologygroup: document.getElementById('technology-group').value,
+      religion: document.getElementById('religion').value,
+      religiousschool: document.getElementById('religious-school')?.value,
+      culturegroup: document.getElementById('culture-group').value,
+      primaryculture: document.getElementById('primary-culture').value,
+      capital: document.getElementById('capital').value,
+      fixedcapital: document.getElementById('fixed-capital').checked ? document.getElementById('capital').value : '',
+      monarchname: document.getElementById('monarch-name').value,
+      dynasty: document.getElementById('dynasty').value,
+      birthDate: document.getElementById('birthDate').value,
+      eu4Date: document.getElementById('eu4date').value,
+      adm: document.getElementById('admin-skill')?.value || 3,
+      dip: document.getElementById('diplo-skill')?.value || 3,
+      mil: document.getElementById('mil-skill')?.value || 3,
+      acceptedCultures: getAcceptedCultures(), // assumes this helper already exists
+      historicalFriends: getHistoricalFriends(),
+      historicalEnemies: getHistoricalRivals(),
+      fileName: `${document.getElementById('country-tag').value.toUpperCase()} - ${document.getElementById('country-name').value}.txt`
+    };
+  }
+
+  function generateCountryFileText(data) {
+    return `government = ${data.government}
+  add_government_reform = ${data.governmentreform}
+  government_rank = 1
+  mercantilism = 25
+  technology_group = ${data.technologygroup}
+  religion = ${data.religion}
+  religious_school = ${data.religiousschool || '-'}
+  primary_culture = ${data.primaryculture}
+  ${(data.acceptedCultures || []).map(c => `add_accepted_culture = ${c.culture}`).join('\n')}
+  ${(data.historicalFriends || []).map(f => `historical_friend = ${f}`).join('\n')}
+  ${(data.historicalEnemies || []).map(r => `historical_rival = ${r}`).join('\n')}
+  capital = ${data.capital}
+  fixed_capital = ${data.fixedcapital ? 'yes' : 'no'}
+  monarch_name = "${data.monarchname}"
+  dynasty = "${data.dynasty}"
+  birth_date = ${data.birthDate}
+  eu4_date = ${data.eu4Date}
+  adm = ${data.adm || 3}
+  dip = ${data.dip || 3}
+  mil = ${data.mil || 3}
+  `;
+  }

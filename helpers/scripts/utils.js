@@ -26,3 +26,13 @@ export function defaultOption(label) {
       inputEl.value = inputEl.value.toUpperCase();
     });
   }
+
+  export function downloadFile(data) {
+    const blob = new Blob([data.text], { type: 'text/plain' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = data.fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }

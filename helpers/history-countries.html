@@ -153,9 +153,6 @@
             <img src="icons/mil.png" alt="Military skill" title="Military skill" class="icon-label">
           </label>
           <input type="number" id="mil-skill" class=skill" name="mil-skill" min="0" max="6" step="1">
-
-
-
         </div>
 
         <!-- Create File button and end of the form -->
@@ -165,7 +162,7 @@
 
         <div class="horizontal">
           <button type="submit" id="save-country">Save country data</button>
-          <button type="submit">Download country file</button>
+          <button type="submit" id="download-country">Download country file</button>
         </div>
         
       </form>
@@ -189,10 +186,14 @@
           <p><strong>capital = </strong> <span id="previewCapital">-</span></p>
       </div>
     </div>
-    <select id="savedCountriesSelect">
-      <option value="">-- Load a saved country --</option>
-    </select>
-    <button id="loadCountryBtn">Load</button>
+
+    <div class="sidebar-column" id="save-manager">
+      <select id="savedCountriesSelect">
+        <option value="">-- Load a saved country --</option>
+      </select>
+      <button id="loadCountryBtn">Load</button>
+    </div>
+
   </div>
 </main>
 
