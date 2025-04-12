@@ -27,6 +27,8 @@ export function defaultOption(label) {
     });
   }
 
+ 
+
   export function downloadFile(data) {
     const blob = new Blob([data.text], { type: 'text/plain' });
     const link = document.createElement('a');
@@ -60,4 +62,34 @@ export function defaultOption(label) {
     const paddedMonth = month.toString().padStart(2, '0');
   
     return `${paddedDay}/${paddedMonth}/${targetYear}`;
+  }
+
+  //deprecated lol
+  export function getRandomRGB() {
+    return [
+      Math.floor(Math.random() * 256),
+      Math.floor(Math.random() * 256),
+      Math.floor(Math.random() * 256)
+    ];
+  }
+
+  export function getPrettyRGB() {
+    const hue = Math.floor(Math.random() * 360);
+    const saturation = 70 + Math.random() * 30; // 70%–100%
+    const lightness = 45 + Math.random() * 10;  // 45%–55%
+  
+    const [r, g, b] = hslToRgb(hue, saturation, lightness);
+    return [r, g, b];
+  }
+
+  function hslToRgb(h, s, l) {
+    s /= 100;
+    l /= 100;
+  
+    const k = n => (n + h / 30) % 12;
+    const a = s * Math.min(l, 1 - l);
+    const f = n =>
+      Math.round(255 * (l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)))));
+  
+    return [f(0), f(8), f(4)];
   }

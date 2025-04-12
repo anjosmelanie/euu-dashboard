@@ -28,15 +28,59 @@
       <h2>Create a country file:</h2>
       <form id="dataForm">
 
-        <div class="horizontal">
-          <!-- Country Name (for the file title)-->
-          <label for="country-name">Country name:</label>
-          <input type="text" id="country-name" name="country-name" class="nameTag" required>
+        <!-- Country Name (for the file title)-->
+        <label for="country-name">Country name:</label>
+        <input type="text" id="country-name" name="country-name" class="nameTag" required>
 
-          <!-- Country Tag (for the file title)-->
-          <label for="country-tag">Country tag:</label>
-          <input type="text" id="country-tag" name ="country-tag" maxlength="3" class="countryTag" required>
+        <!-- Graphical Culture-->
+        <label for="graphical-culture">Graphical culture:</label>
+        <select id="graphical-culture" name="graphicalCulture" required>
+          <option value="">-- Select graphical culture --</option>
+        </select>
+
+        <!-- Color -->
+        <div class="color-section">
+          <label>Color:</label>
+          <div class="horizontal">
+            <input type="number" min="0" max="255" class="color-r" placeholder="R">
+            <input type="number" min="0" max="255" class="color-g" placeholder="G">
+            <input type="number" min="0" max="255" class="color-b" placeholder="B">
+            <div class="color-preview" id="preview-color"></div>
+            <button type="button" class="reroll-color" data-target="color">🎲</button>
+          </div>
         </div>
+        
+        <!-- Revolutionary Color-->
+        <div class="color-section">
+          <label>Revolutionary Color:</label>
+          <div class="horizontal">
+            <input type="number" min="0" max="255" class="rev-color-r" placeholder="R">
+            <input type="number" min="0" max="255" class="rev-color-g" placeholder="G">
+            <input type="number" min="0" max="255" class="rev-color-b" placeholder="B">
+            <div class="color-preview" id="preview-rev-color"></div>
+            <button type="button" class="reroll-color" data-target="rev-color">🎲</button>
+          </div>
+        </div>
+
+        <!-- Idea Groups -->
+        <div id="idea-group-container">
+          <label>Idea Groups:</label>
+          <div class="vertical">
+            <select class="idea-select" name="idea1"></select>
+            <select class="idea-select" name="idea2"></select>
+            <select class="idea-select" name="idea3"></select>
+            <select class="idea-select" name="idea4"></select>
+            <select class="idea-select" name="idea5"></select>
+            <select class="idea-select" name="idea6"></select>
+            <select class="idea-select" name="idea7"></select>
+            <select class="idea-select" name="idea8"></select>
+          </div>
+        </div>
+        <button type="button" id="randomize-ideas">🎲 Randomize Ideas</button>
+
+        <!-- TO DO: Historical Units have been skipped due to my sheer ignorance about them. If this results in a problem in the future maybe i'll do an implementation -->
+
+        <!-- Monarch Names and the rest of sections have been skipped too due to massive complications hehe :3 hopefully the game picks them up from primary culture or something -->
 
       </form>
     </div>

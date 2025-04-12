@@ -98,6 +98,12 @@ body {
     gap: 1rem;
   }
 
+  .vertical{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .preview-column {
     background-color: #ffffff;
   }
@@ -159,6 +165,10 @@ body {
 
   .skill input[type="number"] {
     width: 2ch;
+  }
+
+  .color-section input[type="number"]{
+    width: 7ch;
   }
 
   .section-divider {
@@ -238,4 +248,12 @@ body {
   
   .save-entry button:focus {
     outline: none;
+  }
+
+  .color-preview {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #ccc;
+    margin-left: 0.5rem;
+    background-color: rgb(255, 255, 255); /* default white */
   }

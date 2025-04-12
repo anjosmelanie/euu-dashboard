@@ -142,3 +142,60 @@ export const TECHNOLOGY_GROUPS = [
     'jewish',
     'zoroastrian'
   ];
+
+ export const GRAPHICAL_CULTURES = [
+  "westerngfx",
+  "easterngfx",
+  "muslimgfx",
+  "indiangfx",
+  "asiangfx",
+  "africangfx",
+  "northamericagfx",
+  "southamericagfx",
+  "inuitgfx",
+  "aboriginalgfx",
+  "polynesiangfx",
+  "southeastasiangfx"
+]; 
+
+export const IDEA_GROUPS = {
+  administrative: [
+    'administrative_ideas',
+    'economic_ideas',
+    'expansion_ideas',
+    'humanist_ideas',
+    'infrastructure_ideas',
+    'innovativeness_ideas',
+    'religious_ideas'
+  ],
+  diplomatic: [
+    'court_ideas',
+    'diplomatic_ideas',
+    'spy_ideas',
+    'exploration_ideas',
+    'influence_ideas',
+    'maritime_ideas',
+    'trade_ideas'
+  ],
+  military: [
+    'defensive_ideas',
+    'mercenary_ideas',
+    'naval_ideas',
+    'offensive_ideas',
+    'quality_ideas',
+    'quantity_ideas',
+    'plutocracy_ideas',
+    'indigenous_ideas',
+    'horde_gov_ideas',
+    'theocracy_gov_ideas',
+    'aristocracy_ideas'
+  ]
+};
+
+export const RESTRICTED_IDEA_GROUPS = [
+  'plutocracy_ideas',
+  'indigenous_ideas',
+  'horde_gov_ideas',
+  'theocracy_gov_ideas',
+  'aristocracy_ideas'
+];
