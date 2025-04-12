@@ -1,0 +1,426 @@
+namespace = covid19
+
+## Origin Event
+country_event = {
+    id = covid19.1
+    title = "covid19.1.title"
+    desc = "covid19.1.description"
+    picture = DEATH
+
+    trigger = {
+        is_year = 1444 # change to 1449 so i can tie it to institution
+        owns = 682
+        NOT = { has_country_flag = covid_outbreak }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    immediate = {
+        set_country_flag = covid_outbreak
+        set_country_flag = covid_alerted
+        682 = { 
+            set_province_flag = covid_origin
+        }
+    }
+
+    option = {
+        name = covid19.1.a  # Quarantine Province
+        add_treasury = -50
+
+        682 = {
+            set_province_flag = infected_province
+            add_province_modifier = {
+                name = covid_infection
+                duration = 3650
+            }
+            add_province_modifier = {
+                name = covid_local_quarantine
+                duration = 3650
+            }
+        }
+    }
+
+    option = {
+        name = covid19.1.b  # Quarantine Country
+        add_treasury = -100
+        add_stability = -1
+
+        682 = {
+            set_province_flag = infected_province
+            add_province_modifier = {
+                name = covid_infection
+                duration = 3650
+            }
+        }
+
+        add_country_modifier = {
+            name = covid_quarantine_nationwide
+            duration = 3650
+        }
+    }
+
+    option = {
+        name = covid19.1.c  # Ignore It
+        add_corruption = 1
+
+        682 = {
+            set_province_flag = infected_province
+            add_province_modifier = {
+                name = covid_infection
+                duration = 3650
+            }
+        }
+    }
+}
+
+## New Country Event
+country_event = {
+    id = covid19.4
+    title = "covid19.4.title"
+    desc = "covid19.4.desc"
+    picture = DEATH
+
+    trigger = {
+        has_country_flag = covid_alerted
+    }
+
+    mean_time_to_happen = {
+        days = 6
+    }
+
+    immediate = {
+        random_owned_province = {
+            limit = { has_province_flag = infected_province }
+
+            set_province_flag = spread_this_tick
+
+            random_list = {
+                ### Neighboring Spread ###
+                35 = {
+                    if = {
+                        limit = {
+                            NOT = { has_province_modifier = covid_local_quarantine }
+                            NOT = { owner = { has_country_modifier = covid_quarantine_nationwide } }
+                        }
+                        random_neighbor_province = {
+                            limit = { NOT = { has_province_flag = infected_province } }
+                            set_province_flag = infected_province
+                            province_event = { id = covid19.5 }
+                        }
+                    }
+                }
+
+                30 = {
+                    if = {
+                        limit = {
+                            has_province_modifier = covid_local_quarantine
+                            NOT = { owner = { has_country_modifier = covid_quarantine_nationwide } }
+                        }
+                        random_neighbor_province = {
+                            limit = { NOT = { has_province_flag = infected_province } }
+                            set_province_flag = infected_province
+                            province_event = { id = covid19.5 }
+                        }
+                    }
+                }
+
+                20 = {
+                    if = {
+                        limit = {
+                            owner = { has_country_modifier = covid_quarantine_nationwide }
+                        }
+                        random_neighbor_province = {
+                            limit = { NOT = { has_province_flag = infected_province } }
+                            set_province_flag = infected_province
+                            province_event = { id = covid19.5 }
+                        }
+                    }
+                }
+
+                ### Internal Spread ###
+                35 = {
+                    if = {
+                        limit = {
+                            NOT = { has_province_modifier = covid_local_quarantine }
+                        }
+                        random_owned_province = {
+                            limit = { NOT = { has_province_flag = infected_province } }
+                            set_province_flag = infected_province
+                            province_event = { id = covid19.5 }
+                        }
+                    }
+                }
+
+                40 = {
+                    if = {
+                        limit = {
+                            has_province_modifier = covid_local_quarantine
+                        }
+                        random_owned_province = {
+                            limit = { NOT = { has_province_flag = infected_province } }
+                            set_province_flag = infected_province
+                            province_event = { id = covid19.5 }
+                        }
+                    }
+                }
+
+                25 = {
+                    if = {
+                        limit = {
+                            owner = { has_country_modifier = covid_quarantine_nationwide }
+                        }
+                        random_owned_province = {
+                            limit = { NOT = { has_province_flag = infected_province } }
+                            set_province_flag = infected_province
+                            province_event = { id = covid19.5 }
+                        }
+                    }
+                }
+
+                ### Global Spread ###
+                30 = {
+                    if = {
+                        limit = {
+                            NOT = { has_province_modifier = covid_local_quarantine }
+                            NOT = { owner = { has_country_modifier = covid_quarantine_nationwide } }
+                        }
+                        random_country = {
+                            limit = {
+                                any_owned_province = {
+                                    NOT = { has_province_flag = infected_province }
+                                }
+                            }
+                            random_owned_province = {
+                                limit = { NOT = { has_province_flag = infected_province } }
+                                set_province_flag = infected_province
+                                province_event = { id = covid19.5 }
+                            }
+                        }
+                    }
+                }
+
+                20 = {
+                    if = {
+                        limit = {
+                            has_province_modifier = covid_local_quarantine
+                        }
+                        random_country = {
+                            limit = {
+                                any_owned_province = {
+                                    NOT = { has_province_flag = infected_province }
+                                }
+                            }
+                            random_owned_province = {
+                                limit = { NOT = { has_province_flag = infected_province } }
+                                set_province_flag = infected_province
+                                province_event = { id = covid19.5 }
+                            }
+                        }
+                    }
+                }
+
+                15 = {
+                    if = {
+                        limit = {
+                            owner = { has_country_modifier = covid_quarantine_nationwide }
+                        }
+                        random_country = {
+                            limit = {
+                                any_owned_province = {
+                                    NOT = { has_province_flag = infected_province }
+                                }
+                            }
+                            random_owned_province = {
+                                limit = { NOT = { has_province_flag = infected_province } }
+                                set_province_flag = infected_province
+                                province_event = { id = covid19.5 }
+                            }
+                        }
+                    }
+                }
+
+                ### Nothing Happens ###
+                10 = {
+                    if = {
+                        limit = {
+                            has_province_modifier = covid_local_quarantine
+                            NOT = { owner = { has_country_modifier = covid_quarantine_nationwide } }
+                        }
+                        # nothing
+                    }
+                }
+
+                40 = {
+                    if = {
+                        limit = {
+                            owner = { has_country_modifier = covid_quarantine_nationwide }
+                        }
+                        # nothing
+                    }
+                }
+            }
+        }
+
+        # Clean up
+        every_owned_province = {
+            limit = { has_province_flag = spread_this_tick }
+            clr_province_flag = spread_this_tick
+        }
+    }
+
+    option = {
+        name = covid19.4.a
+        ai_chance = { factor = 100 }
+    }
+}
+
+
+
+
+
+
+## Stats for Debug
+country_event = {
+    id = covid19.stats
+    title = "covid19.stats.title"
+    desc = "covid19.stats.desc"
+    picture = DEATH
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            set_variable = { which = covid_province_count value = 0 }
+            set_variable = { which = covid_country_count value = 0 }
+        }
+
+        every_country = {
+            limit = {
+                any_owned_province = {
+                    has_province_flag = infected_province
+                }
+            }
+
+            hidden_effect = {
+                change_variable = { which = covid_country_count value = 1 }
+            }
+
+            every_owned_province = {
+                limit = {
+                    has_province_flag = infected_province
+                }
+                
+                hidden_effect = {
+                    change_variable = { which = covid_province_count value = 1 }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = covid19.stats.a
+    }
+}
+
+
+## New Country infected
+country_event = {
+    id = covid19.3
+    title = "covid19.3.title"
+    desc = "covid19.3.desc"
+    picture = DEATH
+    is_triggered_only = yes
+
+    immediate = {
+        set_country_flag = covid_alerted
+    }
+
+    ## Can we make quarantine increase chances of resist
+
+    option = {
+        name = covid19.3.a  # Quarantine Province
+        add_treasury = -50
+
+        FROM = {
+            add_province_modifier = {
+                name = covid_infection
+                duration = 3650
+            }
+            add_province_modifier = {
+                name = covid_local_quarantine
+                duration = 3650
+            }
+        }
+    }
+
+    option = {
+        name = covid19.3.b  # Quarantine Country
+        trigger = {
+            NOT = { has_country_modifier = covid_quarantine_nationwide }
+        }
+        add_treasury = -100
+        add_stability = -1
+
+        FROM = {
+            add_province_modifier = {
+                name = covid_infection
+                duration = 3650
+            }
+        }
+
+        add_country_modifier = {
+            name = covid_quarantine_nationwide
+            duration = 3650
+        }
+    }
+
+    option = {
+        name = covid19.3.c  # Ignore It
+        trigger = {
+            NOT = { has_country_modifier = covid_quarantine_nationwide }
+        }
+        add_corruption = 1
+
+        FROM = {
+            add_province_modifier = {
+                name = covid_infection
+                duration = 3650
+            }
+        }
+    }
+
+    option = {
+        name = covid19.3.d  # We’ve already taken action
+        trigger = {
+            has_country_modifier = covid_quarantine_nationwide
+        }
+
+        FROM = {
+            add_province_modifier = {
+                name = covid_infection
+                duration = 3650
+            }
+        }
+    }
+}
+
+## Forwarding Province Event (Hidden)
+province_event = {
+    id = covid19.5
+    title = "covid19.5.title"
+    desc = "covid19.5.desc"
+    is_triggered_only = yes
+    hidden = yes
+
+    immediate = {
+        owner = {
+            country_event = { id = covid19.3 }
+        }
+    }
+
+    option = {
+        name = covid19.5.a
+        ai_chance = { factor = 100 }
+    }
+}

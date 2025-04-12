@@ -1,0 +1,25 @@
+﻿l_english:
+ covid19.1.title: "Outbreak in Wuchang"
+ covid19.1.description: "A strange and deadly illness has emerged in the city of Wuchang..."
+ covid19.1.a: "Quarantine my capital"
+ covid19.1.b: "Quarantine the whole country"
+ covid19.1.c: "Ignore it for now..."
+
+ covid19.3.title: "A mysterious illness has spread to our country"
+ covid19.3.desc: "One of our provinces has been struck by a mysterious illness that began abroad. We must consider quarantine measures immediately."
+ covid19.3.a: "Quarantine the infected province"
+ covid19.3.b: "Quarantine the whole country"
+ covid19.3.c: "Ignore it for now..."
+ covid19.3.d: "We're doing everything we can!"
+
+ covid19.4.title: "The illness continues to spread"
+ covid19.4.desc: "Despite our efforts, the disease continues to spread across our lands."
+ covid19.4.a: "There's nothing we can do about it..."
+
+ covid19.5.title: "Our lands are infected"
+ covid19.5.desc: "The infection has reached a new province, weakening our local workforce and spreading unrest."
+ covid19.5.a: "We must endure it..."
+
+ covid19.stats.title: "Global Pandemic Status"
+ covid19.stats.desc: "Compiled data on the spread of infection worldwide:"
+ covid19.stats.a: "I know enough... hehehe :3"
