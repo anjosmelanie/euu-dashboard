@@ -164,7 +164,7 @@
         </div>
 
         <div class="horizontal">
-          <button type="submit">Save country data</button>
+          <button type="submit" id="save-country">Save country data</button>
           <button type="submit">Download country file</button>
         </div>
         
@@ -189,6 +189,10 @@
           <p><strong>capital = </strong> <span id="previewCapital">-</span></p>
       </div>
     </div>
+    <select id="savedCountriesSelect">
+      <option value="">-- Load a saved country --</option>
+    </select>
+    <button id="loadCountryBtn">Load</button>
   </div>
 </main>
 
