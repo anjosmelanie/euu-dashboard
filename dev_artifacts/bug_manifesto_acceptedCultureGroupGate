@@ -1,0 +1,48 @@
+Manifesto of the Accepted Culture Group Gate
+─────────────────────────────────────────────
+
+Date: Unknown. Time: Eternal. 
+Mood: Losing it gently.
+
+It began with good intentions. 
+All I wanted was to let my form remember a few accepted cultures. 
+A little dropdown for culture groups. A little dropdown for cultures. 
+A happy pairing.
+
+And yet... the culture was not saved.
+
+I checked the function. I checked the names.
+I checked the localStorage. I checked my soul.
+
+Every time, it returned:
+{ group: "Byzantine", culture: "Byzantine" }
+
+That’s not right. Unless Byzantium conquered itself.
+Which... okay, historically plausible, but not what I meant.
+
+I added logs.
+I added prayers.
+I added `:not([name^="acceptedCultureGroup"])`.
+
+I stared into the debugger and the debugger stared back.
+
+Eventually, I saw the truth:
+querySelector does not care about your dreams.
+It just finds the first thing that matches. 
+And sometimes, that's the culture group. Twice.
+
+I fixed it.
+With a selector more precise than a laser.
+And a `setTimeout` that gave my dropdowns time to breathe.
+
+The cultures now save. They now load.
+But I remain changed.
+
+This is my tribute.
+This is my pain.
+This is my `bug_manifesto_acceptedCultureGroupGate.txt`.
+
+Never again.
+
+───────────────
+~ the dev
