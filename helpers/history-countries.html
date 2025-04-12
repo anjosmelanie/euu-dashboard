@@ -33,7 +33,7 @@
 
           <!-- Country Tag (for the file title)-->
           <label for="tag">Country tag:</label>
-          <input type="text" id="tag" maxlength="3" required>
+          <input type="text" id="tag" maxlength="3" class="countryTag" required>
         </div>
 
          <!-- Government -->
@@ -92,8 +92,15 @@
 
         <!-- Add accepted culture(s)-->
         <div id="accepted-cultures-container"></div>
-
         <button type="button" id="add-accepted-culture">+ Add Accepted Culture</button>
+        
+        <!-- Add historical friend(s)-->
+        <div id="historical-friends-container"></div>
+        <button type="button" id="add-historical-friend">+ Add Historical Friend</button>
+
+        <!-- Add historical rival(s)-->
+        <div id="historical-rivals-container"></div>
+        <button type="button" id="add-historical-rival">+ Add Historical Rival</button>
 
         <!-- Create File button and end of the form -->
         <button type="submit">Create</button>
@@ -106,15 +113,15 @@
       <h3><span id="previewTag">-</span> - <span id="previewName">-</span></h3>
       <div class="preview-box">
           <p><strong>government = </strong> <span id="previewGovernment">-</span></p>
-          <p><strong>add_government_reform = </strong> <span id="previewReform">-</span></p>
+          <p><strong>add_government_reform = </strong> <span id="previewReform">-</span></p> <!-- Should be optional -->
           <p><strong>government_rank = 1</p>
           <p><strong>mercantilism = 25</p>
           <p><strong>technology_group = </strong> <span id="previewTechnology">-</span></p>
           <p><strong>religion = </strong> <span id="previewReligion">-</span></p>
-          <p><strong>religious_school = </strong> <span id="previewSchool">-</span></p>
+          <p><strong>religious_school = </strong> <span id="previewSchool">-</span></p> <!-- Should be optional -->
           <p><strong>primary_culture = </strong> <span id="previewCulture">-</span></p>
-          <p><strong>add_accepted_culture = </strong> <span id="previewAccepted">-</span></p>
-          <p><strong>historical_friend = </strong> <span id="previewFriend">-</span></p>
+          <p><strong>add_accepted_culture = </strong> <span id="previewAccepted">-</span></p> <!-- Should be optional -->
+          <p><strong>historical_friend = </strong> <span id="previewFriend">-</span></p> <!-- Should be optional -->
           <p><strong>capital = </strong> <span id="previewCapital">-</span></p>
       </div>
     </div>
@@ -130,7 +137,8 @@
 </html>
 
 <!-- TO DO: Checkbox for capital is fixed that will create extra entry in file fidex_capital -->
-<!-- TO DO: Allow to add accepted cultures (button) -->
-<!-- TO DO: Allow to add historical friend (button) -->
+<!-- TO DO: Allow to add historical friend and rival(button) -->
 <!-- TO DO: Allow to create monarch and heir -->
+<!-- TO DO: Save to local storage and add another column for stored countries (tag - country) -->
+<!-- TO DO: Add buttons for: NEW , SAVE, DOWNLOAD and DOWNLOAD ALL (in the right column with stored)-->
 <!-- TO DO: Upload an existing file and fill all the fields on it, allowing to edit them -->

@@ -79,3 +79,8 @@ body {
     background-color: #34495e;
     color: #ffffff;
   }
+
+  .countryTag {
+    width: 4ch; /* Just wide enough for 3 characters and a little space */
+    text-align: center;
+  }

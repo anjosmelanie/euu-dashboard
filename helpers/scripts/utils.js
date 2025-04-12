@@ -20,3 +20,9 @@ export function defaultOption(label) {
       selectEl.appendChild(opt);
     });
   }
+
+  export function makeUppercaseOnInput(inputEl) {
+    inputEl.addEventListener('input', () => {
+      inputEl.value = inputEl.value.toUpperCase();
+    });
+  }

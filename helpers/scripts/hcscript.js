@@ -1,7 +1,7 @@
 // Imports from other js files
 import { CULTURE_OPTIONS, TRIGGER_RELIGIONS, RELIGIOUS_SCHOOL_OPTIONS, GOVERNMENT_REFORM_OPTIONS,
    TECHNOLOGY_GROUPS, RELIGIONS } from './constants.js';
-import { defaultOption, populateSelect } from './utils.js';
+import { defaultOption, populateSelect, makeUppercaseOnInput } from './utils.js';
 
 // Constants for history/countries
 const nameInput = document.getElementById('name');
@@ -27,6 +27,7 @@ nameInput.addEventListener('input', () => {
 });
 
 tagInput.addEventListener('input', () => {
+  tagInput.value = tagInput.value.toUpperCase();
   document.getElementById('previewTag').textContent = (tagInput.value).toUpperCase() || '-';
 });
 
@@ -131,11 +132,15 @@ religionSelect.addEventListener('change', () => {
       // Wrapper div for layout
     const wrapper = document.createElement('div');
     wrapper.classList.add('horizontal');
-    wrapper.classList.add('accepted-culture-pair');
+    // remove? wrapper.classList.add('accepted-culture-pair');
 
     // Create culture group select
     const cultureGroupSelect = document.createElement('select');
     const cultureSelect = document.createElement('select');
+
+    const label = document.createElement('label');
+    label.htmlFor = `acceptedCulture${acceptedCultureCount}`; // links to the input's id
+    label.textContent = `Accepted culture ${acceptedCultureCount}:`;
 
     cultureGroupSelect.name = `acceptedCultureGroup${acceptedCultureCount}`;
     cultureSelect.name = `acceptedCulture${acceptedCultureCount}`;
@@ -160,6 +165,7 @@ religionSelect.addEventListener('change', () => {
     });
 
     // Append to wrapper
+    wrapper.appendChild(label);
     wrapper.appendChild(cultureGroupSelect);
     wrapper.appendChild(cultureSelect);
     wrapper.appendChild(removeButton);
@@ -169,3 +175,44 @@ religionSelect.addEventListener('change', () => {
     });
 
   // Add historical friends
+  //<label for="tag">Country tag:</label>
+  //<input type="text" id="tag" maxlength="3" class="countryTag" required>
+  const addFriendBtn = document.getElementById('add-historical-friend');
+  const friendsContainer = document.getElementById('historical-friends-container');
+
+  let historicalFriendCount = 0;
+
+  addFriendBtn.addEventListener('click', () => {
+    historicalFriendCount++;
+
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('horizontal');
+
+    const label = document.createElement('label');
+    label.htmlFor = `historicalFriend${historicalFriendCount}`; // links to the input's id
+    label.textContent = `Historical Friend ${historicalFriendCount}:`;
+
+    const input = document.createElement('input');
+    makeUppercaseOnInput(input);
+    input.type = 'text';
+    input.name = `historicalFriend${historicalFriendCount}`;
+    input.id = `historicalFriend${historicalFriendCount}`;
+    input.placeholder = `AAA`;
+    input.classList.add('countryTag');
+    input.maxLength = 3;
+
+    // TO DO: Extract to utils
+    const removeButton = document.createElement('button');
+    removeButton.type = 'button';
+    removeButton.textContent = '🗑️';
+    removeButton.classList.add('remove-btn');
+    removeButton.addEventListener('click', () => {
+      wrapper.remove();
+    });
+
+    wrapper.appendChild(label);
+    wrapper.appendChild(input);
+    wrapper.appendChild(removeButton);
+
+    friendsContainer.appendChild(wrapper);
+  });
