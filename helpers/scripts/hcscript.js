@@ -175,8 +175,6 @@ religionSelect.addEventListener('change', () => {
     });
 
   // Add historical friends
-  //<label for="tag">Country tag:</label>
-  //<input type="text" id="tag" maxlength="3" class="countryTag" required>
   const addFriendBtn = document.getElementById('add-historical-friend');
   const friendsContainer = document.getElementById('historical-friends-container');
 
@@ -197,7 +195,7 @@ religionSelect.addEventListener('change', () => {
     input.type = 'text';
     input.name = `historicalFriend${historicalFriendCount}`;
     input.id = `historicalFriend${historicalFriendCount}`;
-    input.placeholder = `AAA`;
+    input.placeholder = `FRI`;
     input.classList.add('countryTag');
     input.maxLength = 3;
 
@@ -216,3 +214,45 @@ religionSelect.addEventListener('change', () => {
 
     friendsContainer.appendChild(wrapper);
   });
+
+  //Add historical rivals
+  const addRivalBtn = document.getElementById('add-historical-rival');
+  const rivalsContainer = document.getElementById('historical-rivals-container');
+
+  let historicalRivalsCount = 0;
+
+  addRivalBtn.addEventListener('click', () => {
+    historicalRivalsCount++;
+
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('horizontal');
+
+    const label = document.createElement('label');
+    label.htmlFor = `historicalRival${historicalRivalsCount}`; // links to the input's id
+    label.textContent = `Historical Rival ${historicalRivalsCount}:`;
+
+    const input = document.createElement('input');
+    makeUppercaseOnInput(input);
+    input.type = 'text';
+    input.name = `historicalRival${historicalRivalsCount}`;
+    input.id = `historicalRival${historicalRivalsCount}`;
+    input.placeholder = `RIV`;
+    input.classList.add('countryTag');
+    input.maxLength = 3;
+
+    // TO DO: Extract to utils
+    const removeButton = document.createElement('button');
+    removeButton.type = 'button';
+    removeButton.textContent = '🗑️';
+    removeButton.classList.add('remove-btn');
+    removeButton.addEventListener('click', () => {
+      wrapper.remove();
+    });
+
+    wrapper.appendChild(label);
+    wrapper.appendChild(input);
+    wrapper.appendChild(removeButton);
+
+    rivalsContainer.appendChild(wrapper);
+  });
+

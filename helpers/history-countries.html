@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>Helper for: history/countries</h1>
-  </header>
+  
 
   <nav class="navbar">
     <ul>
@@ -19,22 +19,36 @@
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
+</header>
 
+<main>
   <div class="container">
     <!-- Left column: the form -->
-    <div class="form-column form">
+    <div class="form-column" id="form-section">
       <h2>Create a country file:</h2>
       <form id="dataForm">
 
         <div class="horizontal">
           <!-- Country Name (for the file title)-->
           <label for="name">Country name:</label>
-          <input type="text" id="name" required>
+          <input type="text" id="name" class="nameTag" required>
 
           <!-- Country Tag (for the file title)-->
           <label for="tag">Country tag:</label>
           <input type="text" id="tag" maxlength="3" class="countryTag" required>
         </div>
+
+        <!-- Capital -->
+        <div class="capital-group">
+          <label for="provinceId">Capital:</label>
+          <input type="number" id="provinceId" name="provinceId" min="1" max="4941" step="1">
+
+          <label class="checkbox-inline">
+            <input type="checkbox" id="fixedCapital" name="fixedCapital">
+            Fixed capital
+          </label>
+          </div>
+        
 
          <!-- Government -->
           <div class="horizontal">
@@ -90,6 +104,10 @@
         </select>
       </div>
 
+      <div class="section-divider">
+        <span>Optional Fields</span>
+      </div>
+
         <!-- Add accepted culture(s)-->
         <div id="accepted-cultures-container"></div>
         <button type="button" id="add-accepted-culture">+ Add Accepted Culture</button>
@@ -102,8 +120,54 @@
         <div id="historical-rivals-container"></div>
         <button type="button" id="add-historical-rival">+ Add Historical Rival</button>
 
+        <div class="section-divider">
+          <span>Head of State</span>
+        </div>
+
+        <div class="horizontal">
+          <label for="monarchname">Monarch name:</label>
+          <input type="text" id="monarchname" class="dynastyname" required>
+
+          <label for="dynasty">Dynasty:</label>
+          <input type="text" id="dynasty" class="dynastyname" required>
+        </div>
+
+        <div class="horizontal">
+          <label for="birthDate">Birth date:</label>
+          <input type="text" id="birthDate" class="dateinput" name="birthDate" placeholder="DD/MM/YYYY" pattern="\d{2}/\d{2}/\d{4}">
+
+          <label for="eu4date">EU4 date:</label>
+          <input type="text" id="eu4date" class="dateinput" name="eu4date" placeholder="11/11/1444" pattern="\d{2}/\d{2}/\d{4}">
+
+          <label for="adminSkill">
+            <img src="icons/adm.png" alt="Administrative skill" title="Administrative skill" class="icon-label">
+          </label>
+          <input type="number" id="adminSkill" class=skill" name="adminSkill" min="0" max="6" step="1">
+
+          <label for="diploSkill">
+            <img src="icons/dip.png" alt="Diplomatic skill" title="Diplomatic skill" class="icon-label">
+          </label>
+          <input type="number" id="diploSkill" class=skill" name="diploSkill" min="0" max="6" step="1">
+
+          <label for="milSkill">
+            <img src="icons/mil.png" alt="Military skill" title="Military skill" class="icon-label">
+          </label>
+          <input type="number" id="milSkill" class=skill" name="milSkill" min="0" max="6" step="1">
+
+
+
+        </div>
+
         <!-- Create File button and end of the form -->
-        <button type="submit">Create</button>
+        <div class="section-divider">
+          <span>Save data</span>
+        </div>
+
+        <div class="horizontal">
+          <button type="submit">Save country data</button>
+          <button type="submit">Download country file</button>
+        </div>
+        
       </form>
     </div>
 
@@ -126,10 +190,13 @@
       </div>
     </div>
   </div>
-
+</main>
 
   <footer>
-    <p>&copy; 2025 anjosmelanie</p>
+    <div class="horizontal">
+      <p>&copy; 2025 anjosmelanie</p> 
+      <a href="https://github.com/anjosmelanie"><img src="icons/git.png" alt="Github icon" title="Github" class="icon-label" style="width: 25px; height: 25px;"></a>
+    </div>
   </footer>
 
   <script type="module" src="scripts/hcscript.js"></script> 
