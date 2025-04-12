@@ -1,7 +1,7 @@
 // Imports from other js files
 import { CULTURE_OPTIONS, TRIGGER_RELIGIONS, RELIGIOUS_SCHOOL_OPTIONS, GOVERNMENT_REFORM_OPTIONS,
    TECHNOLOGY_GROUPS, RELIGIONS } from './constants.js';
-import { defaultOption, populateSelect, makeUppercaseOnInput, downloadFile } from './utils.js';
+import { defaultOption, populateSelect, makeUppercaseOnInput, downloadFile, convertModernBirthDateTo1444 } from './utils.js';
 
 // Constants for history/countries
 const governmentSelect = document.getElementById('government');
@@ -34,8 +34,14 @@ document.getElementById('save-country').addEventListener('click', saveCurrentHis
 document.getElementById('download-country').addEventListener('click', () => {
   saveCurrentHistoryCountry();
   const data = getCurrentFormData();
-  const text = generateCountryFileText(data);
+  const text = generateCountryPreviewText(data);
   downloadFile({ fileName: data.fileName, text });
+});
+
+// Birth date adjustment
+document.getElementById('birth-date').addEventListener('change', (e) => {
+  const adjusted = convertModernBirthDateTo1444(e.target.value);
+  document.getElementById('eu4-birth-date').value = adjusted;
 });
 
 // Government Reform dropdown
@@ -97,8 +103,6 @@ religionSelect.addEventListener('change', () => {
 
   // Add accepted culture
   const addCultureBtn = document.getElementById('add-accepted-culture');
-  const culturesContainer = document.getElementById('accepted-cultures-container');
-
   let acceptedCultureCount = 0;
   
   addCultureBtn.addEventListener('click', addAcceptedCulture);
@@ -331,7 +335,7 @@ religionSelect.addEventListener('change', () => {
       if ( group?.value && culture?.value ) {
         acceptedCultures.push({
           group: group.value,
-          culture: culture.value
+          culture: culture.value.toLowerCase()
         });
       }
     });
@@ -501,35 +505,11 @@ religionSelect.addEventListener('change', () => {
       adm: document.getElementById('adm-skill')?.value || 3,
       dip: document.getElementById('dip-skill')?.value || 3,
       mil: document.getElementById('mil-skill')?.value || 3,
-      acceptedCultures: getAcceptedCultures(), // assumes this helper already exists
+      acceptedCultures: getAcceptedCultures(), 
       historicalFriends: getHistoricalFriends(),
       historicalEnemies: getHistoricalRivals(),
       fileName: `${document.getElementById('country-tag').value.toUpperCase()} - ${document.getElementById('country-name').value}.txt`
     };
-  }
-
-  function generateCountryFileText(data) {
-    return `government = ${data.government}
-  add_government_reform = ${data.governmentreform}
-  government_rank = 1
-  mercantilism = 25
-  technology_group = ${data.technologygroup}
-  religion = ${data.religion}
-  religious_school = ${data.religiousschool || '-'}
-  primary_culture = ${data.primaryculture}
-  ${(data.acceptedCultures || []).map(c => `add_accepted_culture = ${c.culture}`).join('\n')}
-  ${(data.historicalFriends || []).map(f => `historical_friend = ${f}`).join('\n')}
-  ${(data.historicalEnemies || []).map(r => `historical_rival = ${r}`).join('\n')}
-  capital = ${data.capital}
-  fixed_capital = ${data.fixedcapital ? 'yes' : 'no'}
-  monarch_name = "${data.monarchname}"
-  dynasty = "${data.dynasty}"
-  birth_date = ${data.birthDate}
-  eu4_date = ${data.eu4Date}
-  adm = ${data.adm || 3}
-  dip = ${data.dip || 3}
-  mil = ${data.mil || 3}
-  `;
   }
 
   function generateCountryPreviewText(data) {
@@ -561,7 +541,9 @@ religionSelect.addEventListener('change', () => {
     );
   
     lines.push(`capital = ${data.capital}`);
-    lines.push(`fixed_capital = ${data.fixedcapital ? 'yes' : 'no'}`);
+    if (data.fixedcapital && data.capital) {
+      lines.push(`fixed_capital = ${data.capital}`);
+    }
   
     lines.push(generateMonarchBlock(data));
   
@@ -574,7 +556,7 @@ religionSelect.addEventListener('change', () => {
           name = "${data.monarchname || ''}"
           monarch_name = "${data.monarchname || ''}"
           dynasty = "${data.dynasty || ''}"
-          birth_date = ${formatDateForTxt(data.birthDate)}
+          birth_date = ${formatDateForTxt(data.eu4Date)}
           adm = ${data.adm || 3}
           dip = ${data.dip || 3}
           mil = ${data.mil || 3}
@@ -583,6 +565,7 @@ religionSelect.addEventListener('change', () => {
   }
 
   function formatDateForTxt(dateStr) {
+    console.log(dateStr);
     if (!dateStr) return '1444.11.11'; // fallback
     const [day, month, year] = dateStr.split('/');
     return `${year}.${parseInt(month)}.${parseInt(day)}`;

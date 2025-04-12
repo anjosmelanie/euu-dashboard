@@ -36,3 +36,28 @@ export function defaultOption(label) {
     link.click();
     document.body.removeChild(link);
   }
+
+  export function convertModernBirthDateTo1444(dateString) {
+    const [day, month, year] = dateString.split('/').map(str => parseInt(str, 10));
+  
+    if (!day || !month || !year) return '';
+  
+    const modernBirth = new Date(year, month - 1, day); // month is 0-indexed in JS
+    const modernReference = new Date('2025-01-01');
+    const eu4Reference = new Date('1444-11-11');
+  
+    // Calculate age in 2025
+    let age = modernReference.getFullYear() - modernBirth.getFullYear();
+    const beforeBirthday =
+      modernReference.getMonth() < modernBirth.getMonth() ||
+      (modernReference.getMonth() === modernBirth.getMonth() &&
+       modernReference.getDate() < modernBirth.getDate());
+  
+    if (beforeBirthday) age--;
+  
+    const targetYear = eu4Reference.getFullYear() - age;
+    const paddedDay = day.toString().padStart(2, '0');
+    const paddedMonth = month.toString().padStart(2, '0');
+  
+    return `${paddedDay}/${paddedMonth}/${targetYear}`;
+  }
