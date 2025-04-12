@@ -155,36 +155,21 @@
           <input type="number" id="mil-skill" class=skill" name="mil-skill" min="0" max="6" step="1">
         </div>
 
-        <!-- Create File button and end of the form -->
-        <div class="section-divider">
-          <span>Save data</span>
-        </div>
-
-        <div class="horizontal">
-          <button type="submit" id="save-country">Save country data</button>
-          <button type="submit" id="download-country">Download country file</button>
-        </div>
-        
       </form>
     </div>
 
     <!-- Right column: live preview -->
     <div class="preview-column">
       <h2>File Preview</h2>
-      <h3><span id="previewTag">-</span> - <span id="previewName">-</span></h3>
-      <div class="preview-box">
-          <p><strong>government = </strong> <span id="previewGovernment">-</span></p>
-          <p><strong>add_government_reform = </strong> <span id="previewReform">-</span></p> <!-- Should be optional -->
-          <p><strong>government_rank = 1</p>
-          <p><strong>mercantilism = 25</p>
-          <p><strong>technology_group = </strong> <span id="previewTechnology">-</span></p>
-          <p><strong>religion = </strong> <span id="previewReligion">-</span></p>
-          <p><strong>religious_school = </strong> <span id="previewSchool">-</span></p> <!-- Should be optional -->
-          <p><strong>primary_culture = </strong> <span id="previewCulture">-</span></p>
-          <p><strong>add_accepted_culture = </strong> <span id="previewAccepted">-</span></p> <!-- Should be optional -->
-          <p><strong>historical_friend = </strong> <span id="previewFriend">-</span></p> <!-- Should be optional -->
-          <p><strong>capital = </strong> <span id="previewCapital">-</span></p>
+      <div id="preview-box" class="preview-box"></div>
+      <div class="horizontal">
+        <label for="file-name">File name:</label>
+        <input type="text" id="file-name" name="file-name" class="name-tag" disabled>
+        <button type="submit" id="reload-preview">Reload preview</button>
+        <button type="submit" id="save-country">Save country data</button>
+        <button type="submit" id="download-country">Download country file</button>
       </div>
+      
     </div>
 
     <div class="sidebar-column" id="save-manager">
@@ -208,9 +193,6 @@
 </body>
 </html>
 
-<!-- TO DO: Checkbox for capital is fixed that will create extra entry in file fidex_capital -->
-<!-- TO DO: Allow to add historical friend and rival(button) -->
-<!-- TO DO: Allow to create monarch and heir -->
-<!-- TO DO: Save to local storage and add another column for stored countries (tag - country) -->
 <!-- TO DO: Add buttons for: NEW , SAVE, DOWNLOAD and DOWNLOAD ALL (in the right column with stored)-->
 <!-- TO DO: Upload an existing file and fill all the fields on it, allowing to edit them -->
+<!-- TO DO: Standarize select default option texts hehe -->

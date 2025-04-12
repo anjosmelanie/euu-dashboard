@@ -23,6 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    min-width: 700px;
     max-width: 700px;
     margin: auto;
   }
@@ -91,8 +92,6 @@ body {
     color: #ffffff;
   }
 
-
-
   .horizontal{
     display: flex;
     flex-direction: row;
@@ -115,9 +114,16 @@ body {
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
-  .preview-box {
+
+  #preview-box {
+    white-space: pre-wrap;
+    font-family: monospace;
+    background-color: #f8f8f8;
     border: 1px solid #ccc;
     padding: 1rem;
+    border-radius: 6px;
+    max-block-size: 70cqb; /* 100% of main's height */
+    overflow-y: auto;
   }
 
   .countryTag {
@@ -125,8 +131,8 @@ body {
     text-align: center;
   }  
   
-  .nameTag {
-    width: 35ch; 
+  .name-tag {
+    width: 15ch; 
   }
 
   .capital-group {

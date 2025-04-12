@@ -4,8 +4,6 @@ import { CULTURE_OPTIONS, TRIGGER_RELIGIONS, RELIGIOUS_SCHOOL_OPTIONS, GOVERNMEN
 import { defaultOption, populateSelect, makeUppercaseOnInput, downloadFile } from './utils.js';
 
 // Constants for history/countries
-const nameInput = document.getElementById('country-name');
-const tagInput = document.getElementById('country-tag');
 const governmentSelect = document.getElementById('government');
 populateSelect(governmentSelect, Object.keys(GOVERNMENT_REFORM_OPTIONS), "Select a government type");
 const governmentReformSelect = document.getElementById('government-reform');
@@ -17,23 +15,26 @@ const religiousSchoolSelect = document.getElementById('religious-school');
 const cultureGroupSelect = document.getElementById('culture-group');
 populateSelect(cultureGroupSelect, Object.keys(CULTURE_OPTIONS), "Select a culture group");
 const primaryCultureSelect = document.getElementById('primary-culture');
-
-// Hidden fields wrappers
 const religiousSchoolWrapper = document.getElementById('schoolWrapper');
 
+//Preview
+function updatePreviewFromForm() {
+  const data = getCurrentFormData(); // your form reader function
+  const previewText = generateCountryPreviewText(data); // the one we made earlier
+  document.getElementById('preview-box').textContent = previewText;
+}
+
+//Any change anywhere in the form triggers the preview update
+document.getElementById('form-section').addEventListener('input', updatePreviewFromForm);
+
 // Save changes to local storage
+document.getElementById('reload-preview').addEventListener('click', console.log(getCurrentFormData));
 document.getElementById('save-country').addEventListener('click', saveCurrentHistoryCountry);
 document.getElementById('download-country').addEventListener('click', () => {
   saveCurrentHistoryCountry();
-  //const data = getCurrentFormData();
-  //const text = generateCountryFileText(data);
+  const data = getCurrentFormData();
+  const text = generateCountryFileText(data);
   downloadFile({ fileName: data.fileName, text });
-});
-
-// Prevent form submission (for now)
-document.getElementById('dataForm').addEventListener('submit', e => {
-  e.preventDefault();
-  alert("Form submitted!");
 });
 
 // Government Reform dropdown
@@ -473,10 +474,6 @@ religionSelect.addEventListener('change', () => {
     localStorage.setItem('euuHistoryCountriesForms', JSON.stringify(saves));
   }
 
-  window.addEventListener('DOMContentLoaded', () => {
-    renderSaveManager();
-  });
-
   function getCurrentFormData() {
     return {
       name: document.getElementById('country-name').value,
@@ -488,14 +485,14 @@ religionSelect.addEventListener('change', () => {
       religiousschool: document.getElementById('religious-school')?.value,
       culturegroup: document.getElementById('culture-group').value,
       primaryculture: document.getElementById('primary-culture').value,
-      capital: document.getElementById('capital').value,
-      fixedcapital: document.getElementById('fixed-capital').checked ? document.getElementById('capital').value : '',
+      capital: document.getElementById('capital-province').value,
+      fixedcapital: document.getElementById('fixed-capital').checked,
       monarchname: document.getElementById('monarch-name').value,
       dynasty: document.getElementById('dynasty').value,
-      birthDate: document.getElementById('birthDate').value,
-      eu4Date: document.getElementById('eu4date').value,
-      adm: document.getElementById('admin-skill')?.value || 3,
-      dip: document.getElementById('diplo-skill')?.value || 3,
+      birthDate: document.getElementById('birth-date').value,
+      eu4Date: document.getElementById('eu4-birth-date').value,
+      adm: document.getElementById('adm-skill')?.value || 3,
+      dip: document.getElementById('dip-skill')?.value || 3,
       mil: document.getElementById('mil-skill')?.value || 3,
       acceptedCultures: getAcceptedCultures(), // assumes this helper already exists
       historicalFriends: getHistoricalFriends(),
@@ -527,3 +524,60 @@ religionSelect.addEventListener('change', () => {
   mil = ${data.mil || 3}
   `;
   }
+
+  function generateCountryPreviewText(data) {
+    let lines = [];
+  
+    lines.push(`government = ${data.government}`);
+    lines.push(`add_government_reform = ${data.governmentreform}`); //TODO: Make conditional
+    lines.push(`government_rank = 1`);
+    lines.push(`mercantilism = 25`);
+    lines.push(`technology_group = ${data.technologygroup}`);
+    lines.push(`religion = ${data.religion}`);
+    lines.push(`religious_school = ${data.religiousschool || '-'}`); //TODO: Make conditional
+    lines.push(`primary_culture = ${data.primaryculture}`);
+  
+    (data.acceptedCultures || []).forEach(({ culture }) =>
+      lines.push(`add_accepted_culture = ${culture}`)
+    );
+  
+    (data.historicalFriends || []).forEach(friend =>
+      lines.push(`historical_friend = ${friend}`)
+    );
+  
+    (data.historicalEnemies || []).forEach(rival =>
+      lines.push(`historical_rival = ${rival}`)
+    );
+  
+    lines.push(`capital = ${data.capital}`);
+    lines.push(`fixed_capital = ${data.fixedcapital ? 'yes' : 'no'}`);
+  
+    lines.push(generateMonarchBlock(data));
+  
+    return lines.join('\n');
+  }
+
+  function generateMonarchBlock(data) {
+    return `1444.11.11 = {
+      monarch = {
+          name = "${data.monarchname || ''}"
+          monarch_name = "${data.monarchname || ''}"
+          dynasty = "${data.dynasty || ''}"
+          birth_date = ${formatDateForTxt(data.birthDate)}
+          adm = ${data.adm || 3}
+          dip = ${data.dip || 3}
+          mil = ${data.mil || 3}
+      }
+  }`;
+  }
+
+  function formatDateForTxt(dateStr) {
+    if (!dateStr) return '1444.11.11'; // fallback
+    const [day, month, year] = dateStr.split('/');
+    return `${year}.${parseInt(month)}.${parseInt(day)}`;
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    renderSaveManager();
+    updatePreviewFromForm();
+  });
