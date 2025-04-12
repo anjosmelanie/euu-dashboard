@@ -2,10 +2,11 @@
 import { CULTURE_OPTIONS, TRIGGER_RELIGIONS, RELIGIOUS_SCHOOL_OPTIONS, GOVERNMENT_REFORM_OPTIONS,
    TECHNOLOGY_GROUPS, RELIGIONS } from './constants.js';
 import { defaultOption, populateSelect, makeUppercaseOnInput } from './utils.js';
+import { saveCurrentHistoryCountry } from './storage.js';
 
 // Constants for history/countries
-const nameInput = document.getElementById('name');
-const tagInput = document.getElementById('tag');
+const nameInput = document.getElementById('country-name');
+const tagInput = document.getElementById('country-tag');
 const governmentSelect = document.getElementById('government');
 populateSelect(governmentSelect, Object.keys(GOVERNMENT_REFORM_OPTIONS), "Select a government type");
 const governmentReformSelect = document.getElementById('government-reform');
@@ -20,6 +21,11 @@ const primaryCultureSelect = document.getElementById('primary-culture');
 
 // Hidden fields wrappers
 const religiousSchoolWrapper = document.getElementById('schoolWrapper');
+
+// Save any changes to local storage
+document.querySelectorAll('input, select').forEach(el => {
+  el.addEventListener('change', saveCurrentHistoryCountry);
+});
 
 // Fields for Preview
 nameInput.addEventListener('input', () => {
@@ -132,7 +138,7 @@ religionSelect.addEventListener('change', () => {
       // Wrapper div for layout
     const wrapper = document.createElement('div');
     wrapper.classList.add('horizontal');
-    // remove? wrapper.classList.add('accepted-culture-pair');
+    wrapper.classList.add('accepted-culture-pair');
 
     // Create culture group select
     const cultureGroupSelect = document.createElement('select');
@@ -185,18 +191,20 @@ religionSelect.addEventListener('change', () => {
 
     const wrapper = document.createElement('div');
     wrapper.classList.add('horizontal');
+    wrapper.classList.add('historical-friends');
 
     const label = document.createElement('label');
-    label.htmlFor = `historicalFriend${historicalFriendCount}`; // links to the input's id
+    label.htmlFor = `historical-friend${historicalFriendCount}`; // links to the input's id
     label.textContent = `Historical Friend ${historicalFriendCount}:`;
 
     const input = document.createElement('input');
     makeUppercaseOnInput(input);
     input.type = 'text';
-    input.name = `historicalFriend${historicalFriendCount}`;
-    input.id = `historicalFriend${historicalFriendCount}`;
+    input.name = `historical-friend${historicalFriendCount}`;
+    input.id = `historical-friend${historicalFriendCount}`;
     input.placeholder = `FRI`;
     input.classList.add('countryTag');
+    input.classList.add('historical-friends');
     input.maxLength = 3;
 
     // TO DO: Extract to utils
@@ -226,18 +234,20 @@ religionSelect.addEventListener('change', () => {
 
     const wrapper = document.createElement('div');
     wrapper.classList.add('horizontal');
+    wrapper.classList.add('historical-rivals');
 
     const label = document.createElement('label');
-    label.htmlFor = `historicalRival${historicalRivalsCount}`; // links to the input's id
+    label.htmlFor = `historical-rival${historicalRivalsCount}`; // links to the input's id
     label.textContent = `Historical Rival ${historicalRivalsCount}:`;
 
     const input = document.createElement('input');
     makeUppercaseOnInput(input);
     input.type = 'text';
-    input.name = `historicalRival${historicalRivalsCount}`;
-    input.id = `historicalRival${historicalRivalsCount}`;
+    input.name = `historical-rival${historicalRivalsCount}`;
+    input.id = `historical-rival${historicalRivalsCount}`;
     input.placeholder = `RIV`;
     input.classList.add('countryTag');
+    input.classList.add('historical-rivals');
     input.maxLength = 3;
 
     // TO DO: Extract to utils

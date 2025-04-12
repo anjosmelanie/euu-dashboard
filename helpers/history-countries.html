@@ -30,21 +30,21 @@
 
         <div class="horizontal">
           <!-- Country Name (for the file title)-->
-          <label for="name">Country name:</label>
-          <input type="text" id="name" class="nameTag" required>
+          <label for="country-name">Country name:</label>
+          <input type="text" id="country-name" name="country-name" class="nameTag" required>
 
           <!-- Country Tag (for the file title)-->
-          <label for="tag">Country tag:</label>
-          <input type="text" id="tag" maxlength="3" class="countryTag" required>
+          <label for="country-tag">Country tag:</label>
+          <input type="text" id="country-tag" name ="country-tag" maxlength="3" class="countryTag" required>
         </div>
 
         <!-- Capital -->
         <div class="capital-group">
-          <label for="provinceId">Capital:</label>
-          <input type="number" id="provinceId" name="provinceId" min="1" max="4941" step="1">
+          <label for="province-id">Capital:</label>
+          <input type="number" id="capital-province" name="capital-province" min="1" max="4941" step="1">
 
           <label class="checkbox-inline">
-            <input type="checkbox" id="fixedCapital" name="fixedCapital">
+            <input type="checkbox" id="fixed-capital" name="fixed-capital">
             Fixed capital
           </label>
           </div>
@@ -77,13 +77,13 @@
         <!-- Religion -->
         <div class="horizontal">
         <label for="religion">Religion:</label>
-        <select id="religion" required>
+        <select id="religion" name="religion" required>
           <option value="">-- Select a religion --</option>
         </select>
 
         <!-- Religious school (in script)-->
         <div id="schoolWrapper" style="display: none; margin-top: 1rem;">
-          <label for="religious-school">Religious school:</label>
+          <label for="religious-school" name="religious-school">Religious school:</label>
           <select id="religious-school">
             <option value="">-- Select a religious school --</option>
           </select>
@@ -93,13 +93,13 @@
         <div class="horizontal">
         <!-- Culture Group (enabler for primary culture dropdown) -->
         <label for="culture-group">Culture Group:</label>
-        <select id="culture-group" required>
+        <select id="culture-group" name="culture-group" required>
           <option value="">-- Please choose a culture group --</option>
         </select>
 
         <!-- Primary Culture (in script)-->
         <label for="primary-culture">Primary Culture:</label>
-        <select id="primary-culture">
+        <select id="primary-culture" name="primary-culture" required>
           <option value="">-- Select a primary culture --</option>
         </select>
       </div>
@@ -125,34 +125,34 @@
         </div>
 
         <div class="horizontal">
-          <label for="monarchname">Monarch name:</label>
-          <input type="text" id="monarchname" class="dynastyname" required>
+          <label for="monarch-name">Monarch name:</label>
+          <input type="text" id="monarch-name" name="monarch-name" class="dynastyname" required>
 
           <label for="dynasty">Dynasty:</label>
-          <input type="text" id="dynasty" class="dynastyname" required>
+          <input type="text" id="dynasty" name="dynasty" class="dynastyname" required>
         </div>
 
         <div class="horizontal">
-          <label for="birthDate">Birth date:</label>
-          <input type="text" id="birthDate" class="dateinput" name="birthDate" placeholder="DD/MM/YYYY" pattern="\d{2}/\d{2}/\d{4}">
+          <label for="birth-dat">Birth date:</label>
+          <input type="text" id="birth-date" class="dateinput" name="birth-dat" placeholder="DD/MM/YYYY" pattern="\d{2}/\d{2}/\d{4}">
 
-          <label for="eu4date">EU4 date:</label>
-          <input type="text" id="eu4date" class="dateinput" name="eu4date" placeholder="11/11/1444" pattern="\d{2}/\d{2}/\d{4}">
+          <label for="u4-birth-date">EU4 date:</label>
+          <input type="text" id="eu4-birth-date" class="dateinput" name="u4-birth-date" placeholder="11/11/1444" pattern="\d{2}/\d{2}/\d{4}">
 
-          <label for="adminSkill">
+          <label for="adm-skill">
             <img src="icons/adm.png" alt="Administrative skill" title="Administrative skill" class="icon-label">
           </label>
-          <input type="number" id="adminSkill" class=skill" name="adminSkill" min="0" max="6" step="1">
+          <input type="number" id="adm-skill" class=skill" name="adm-skill" min="0" max="6" step="1">
 
-          <label for="diploSkill">
+          <label for="dip-skill">
             <img src="icons/dip.png" alt="Diplomatic skill" title="Diplomatic skill" class="icon-label">
           </label>
-          <input type="number" id="diploSkill" class=skill" name="diploSkill" min="0" max="6" step="1">
+          <input type="number" id="dip-skill" class=skill" name="dip-skill" min="0" max="6" step="1">
 
-          <label for="milSkill">
+          <label for="mil-skill">
             <img src="icons/mil.png" alt="Military skill" title="Military skill" class="icon-label">
           </label>
-          <input type="number" id="milSkill" class=skill" name="milSkill" min="0" max="6" step="1">
+          <input type="number" id="mil-skill" class=skill" name="mil-skill" min="0" max="6" step="1">
 
 
 
