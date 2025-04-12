@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EUU history/countries helper</title>
+  <title>EUU | history/countries</title>
   <link rel="stylesheet" href="styles/styles.css"> 
 </head>
 <body>
   <header>
-    <h1>history/countries helper</h1>
+    <h1>Helper for: history/countries</h1>
   </header>
 
-  <nav>
+  <nav class="navbar">
     <ul>
-      <li><a href="index.html">EUU Helpers</a></li>
-      <li><a href="history-countries.html">History/Countries helper</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="history-countries.html">history/countries</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
@@ -22,20 +22,17 @@
 
   <div class="container">
     <!-- Left column: the form -->
-    <div class="form-column">
+    <div class="form-column form">
       <h2>Create a country file:</h2>
       <form id="dataForm">
+
         <!-- Country Name (for the file title)-->
-        <label>
-          Country name:
-          <input type="text" id="name" required>
-        </label>
+        <label for="name">Country name:</label>
+        <input type="text" id="name" required>
 
         <!-- Country Tag (for the file title)-->
-        <label>
-          Country tag:
-          <input type="text" id="tag" maxlength="3" required>
-        </label>
+        <label for="tag">Country tag:</label>
+        <input type="text" id="tag" maxlength="3" required>
 
          <!-- Government -->
         <label for="government">Government:</label>
@@ -234,7 +231,7 @@
     <p>&copy; 2025 anjosmelanie</p>
   </footer>
 
-  <script src="scripts/hcscript.js"></script> 
+  <script type="module" src="scripts/hcscript.js"></script> 
 </body>
 </html>
 
