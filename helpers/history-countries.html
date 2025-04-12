@@ -26,6 +26,7 @@
       <h2>Create a country file:</h2>
       <form id="dataForm">
 
+        <div class="horizontal">
         <!-- Country Name (for the file title)-->
         <label for="name">Country name:</label>
         <input type="text" id="name" required>
@@ -33,6 +34,7 @@
         <!-- Country Tag (for the file title)-->
         <label for="tag">Country tag:</label>
         <input type="text" id="tag" maxlength="3" required>
+      </div>
 
          <!-- Government -->
         <label for="government">Government:</label>
@@ -119,6 +121,7 @@
           </select>
         </div>
 
+        <div class="horizontal">
         <!-- Culture Group (enabler for primary culture dropdown) -->
         <label for="culture-group">Culture Group:</label>
         <select id="culture-group" required>
@@ -200,6 +203,11 @@
         <select id="primary-culture">
           <option value="">-- Select a primary culture --</option>
         </select>
+      </div>
+        <!-- Add accepted culture(s)-->
+        <div id="accepted-cultures-container"></div>
+
+        <button type="button" id="add-accepted-culture">+ Add Accepted Culture</button>
 
         <!-- Create File button and end of the form -->
         <button type="submit">Create</button>

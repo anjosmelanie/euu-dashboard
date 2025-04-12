@@ -79,3 +79,11 @@ export const CULTURE_OPTIONS = {
     "Western Aryan": ["Gujarati", "Malvi", "Marathi", "Parsi", "Rajasthani", "Saurashtri", "Sindhi"],
     "West Slavic": ["Czech", "Polish", "Silesian", "Slovak", "Sorbian"]
   };
+
+  // TO DO: Add all government reforms (will take forever)
+export const GOVERNMENT_REFORM_OPTIONS = {
+    monarchy: ['Feudal Nobility', 'Autocracy', 'Elective Monarchy', 'Admiralty Regime', 'Eastern Plutocracy', 'Iqta', 'Barbary Iqta', 'Indian Sultanate', 'Nayankara System', 'Misl Confederacy', 'Rajput Kingdom', 'Mandala System', 'Chakravarti', 'Chinese Kingdom', 'Confucian Bureaucracy', 'Celestial Empire', 'Ganden Phodrang', 'Hermit Kingdom', 'Daimyo', 'Independent Daimyo', 'Shogunate', 'Supreme Shogunate', 'Divine Empire', 'Land of the Christian Sun', 'Russian Principality', 'Tsardom', 'Russian Empire', 'Ruthenian Tsardom', 'Austrian Archduchy', 'Imperial Austrian Monarchy'],
+    republic: ['tbd', 'tbd'],
+    religion: ['tbd', 'tbd'],
+    tribal: ['tbd', 'tbd']
+  };

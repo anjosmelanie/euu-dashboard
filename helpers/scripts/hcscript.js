@@ -1,5 +1,5 @@
 // Imports from other js files
-import { CULTURE_OPTIONS, TRIGGER_RELIGIONS, RELIGIOUS_SCHOOL_OPTIONS } from './constants.js';
+import { CULTURE_OPTIONS, TRIGGER_RELIGIONS, RELIGIOUS_SCHOOL_OPTIONS, GOVERNMENT_REFORM_OPTIONS } from './constants.js';
 import { defaultOption } from './utils.js';
 
 // Constants for history/countries
@@ -15,7 +15,6 @@ const primaryCultureSelect = document.getElementById('primary-culture');
 
 // Hidden fields wrappers
 const religiousSchoolWrapper = document.getElementById('schoolWrapper');
-const triggerReligions = ['sunni', 'shia'];
 
 // Fields for Preview
 nameInput.addEventListener('input', () => {
@@ -59,17 +58,9 @@ document.getElementById('dataForm').addEventListener('submit', e => {
 });
 
 // Government Reform dropdown
-// TO DO: Add all government reforms (will take forever)
-const governmentReformOptions = {
-  monarchy: ['Feudal Nobility', 'Autocracy', 'Elective Monarchy', 'Admiralty Regime', 'Eastern Plutocracy', 'Iqta', 'Barbary Iqta', 'Indian Sultanate', 'Nayankara System', 'Misl Confederacy', 'Rajput Kingdom', 'Mandala System', 'Chakravarti', 'Chinese Kingdom', 'Confucian Bureaucracy', 'Celestial Empire', 'Ganden Phodrang', 'Hermit Kingdom', 'Daimyo', 'Independent Daimyo', 'Shogunate', 'Supreme Shogunate', 'Divine Empire', 'Land of the Christian Sun', 'Russian Principality', 'Tsardom', 'Russian Empire', 'Ruthenian Tsardom', 'Austrian Archduchy', 'Imperial Austrian Monarchy'],
-  republic: ['Empty Object', 'API Config', 'User Settings'],
-  religion: ['Game Settings', 'Dev Build', 'Production Ready'],
-  tribal: ['Game Settings', 'Dev Build', 'Production Ready']
-};
-
 governmentSelect.addEventListener('change', () => {
   const selectedGovernment = governmentSelect.value;
-  const reforms = governmentReformOptions[selectedGovernment] || [];
+  const reforms = GOVERNMENT_REFORM_OPTIONS[selectedGovernment] || [];
 
   // Clear current template options
   governmentReformSelect.innerHTML = defaultOption('government reform');
@@ -84,11 +75,6 @@ governmentSelect.addEventListener('change', () => {
 });
 
 // Religious School conditional dropdown
-const religiousSchoolOptions = {
-    sunni: ['hanafi_school', 'hanbali_school', 'maliki_school', 'shafii_school'],
-    shia: ['ismaili_school', 'jafari_school', 'zaidi_school']
-  };
-
 religionSelect.addEventListener('change', () => {
     const selectedReligion = religionSelect.value;
     const schools = RELIGIOUS_SCHOOL_OPTIONS[selectedReligion] || [];
@@ -127,3 +113,46 @@ religionSelect.addEventListener('change', () => {
       primaryCultureSelect.appendChild(option);
     });
   });
+
+  //Add accepted culture
+  const addCultureBtn = document.getElementById('add-accepted-culture');
+  const culturesContainer = document.getElementById('accepted-cultures-container');
+
+  let acceptedCultureCount = 0;
+
+  addCultureBtn.addEventListener('click', () => {
+    acceptedCultureCount++;
+
+      // Wrapper div for layout
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('accepted-culture-pair');
+
+    // Create culture group select
+    const cultureGroupSelect = document.createElement('select');
+    cultureGroupSelect.name = `acceptedCultureGroup${acceptedCultureCount}`;
+    cultureGroupSelect.innerHTML = `
+      <option value="">-- Select culture group --</option>
+      <option value="latin">Latin</option>
+      <option value="germanic">Germanic</option>
+      <option value="slavic">Slavic</option>
+      <!-- Add more as needed -->
+    `;
+
+    // Create primary culture select
+    const cultureSelect = document.createElement('select');
+    cultureSelect.name = `acceptedCulture${acceptedCultureCount}`;
+    cultureSelect.innerHTML = `
+      <option value="">-- Select culture --</option>
+      <option value="castilian">Castilian</option>
+      <option value="franconian">Franconian</option>
+      <option value="serbian">Serbian</option>
+      <!-- Add more as needed -->
+    `;
+
+    // Append to wrapper
+    wrapper.appendChild(cultureGroupSelect);
+    wrapper.appendChild(cultureSelect);
+
+    // Add to container
+    culturesContainer.appendChild(wrapper);
+    });
