@@ -85,5 +85,60 @@ export const GOVERNMENT_REFORM_OPTIONS = {
     monarchy: ['Feudal Nobility', 'Autocracy', 'Elective Monarchy', 'Admiralty Regime', 'Eastern Plutocracy', 'Iqta', 'Barbary Iqta', 'Indian Sultanate', 'Nayankara System', 'Misl Confederacy', 'Rajput Kingdom', 'Mandala System', 'Chakravarti', 'Chinese Kingdom', 'Confucian Bureaucracy', 'Celestial Empire', 'Ganden Phodrang', 'Hermit Kingdom', 'Daimyo', 'Independent Daimyo', 'Shogunate', 'Supreme Shogunate', 'Divine Empire', 'Land of the Christian Sun', 'Russian Principality', 'Tsardom', 'Russian Empire', 'Ruthenian Tsardom', 'Austrian Archduchy', 'Imperial Austrian Monarchy'],
     republic: ['tbd', 'tbd'],
     religion: ['tbd', 'tbd'],
-    tribal: ['tbd', 'tbd']
+    tribal: ['tbd', 'tbd'],
+    monastic: [],
+    dictatorship: [],
+    nomad: [],
+    papacy: []
   };
+
+export const TECHNOLOGY_GROUPS = [
+    'western',
+    'high american',
+    'eastern',
+    'anatolian',
+    'muslim',
+    'indian',
+    'chinese',
+    'east african',
+    'west african',
+    'central african',
+    'nomadic',
+    'mesoamerican',
+    'andean',
+    'north american',
+    'south american',
+    'aboriginal',
+    'polynesian'
+  ];
+
+  export const RELIGIONS = [
+    'catholic',
+    'protestant',
+    'reformed',
+    'orthodox',
+    'coptic',
+    'anglican',
+    'hussite',
+    'sunni',
+    'shia',
+    'ibadi',
+    'mahayana',
+    'theravada',
+    'vajrayana',
+    'confucian',
+    'shinto',
+    'animist',
+    'fetishist',
+    'totemist',
+    'inti',
+    'mayan',
+    'nahuatl',
+    'tengri',
+    'norse',
+    'alcheringa',
+    'hindu',
+    'sikh',
+    'jewish',
+    'zoroastrian'
+  ];

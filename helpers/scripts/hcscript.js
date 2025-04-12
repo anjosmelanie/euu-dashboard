@@ -1,16 +1,21 @@
 // Imports from other js files
-import { CULTURE_OPTIONS, TRIGGER_RELIGIONS, RELIGIOUS_SCHOOL_OPTIONS, GOVERNMENT_REFORM_OPTIONS } from './constants.js';
+import { CULTURE_OPTIONS, TRIGGER_RELIGIONS, RELIGIOUS_SCHOOL_OPTIONS, GOVERNMENT_REFORM_OPTIONS,
+   TECHNOLOGY_GROUPS, RELIGIONS } from './constants.js';
 import { defaultOption, populateSelect } from './utils.js';
 
 // Constants for history/countries
 const nameInput = document.getElementById('name');
 const tagInput = document.getElementById('tag');
 const governmentSelect = document.getElementById('government');
+populateSelect(governmentSelect, Object.keys(GOVERNMENT_REFORM_OPTIONS), "Select a government type");
 const governmentReformSelect = document.getElementById('government-reform');
 const technologyGroupSelect = document.getElementById('technology-group');
+populateSelect(technologyGroupSelect, TECHNOLOGY_GROUPS, "Select a technology group");
 const religionSelect = document.getElementById('religion');
+populateSelect(religionSelect, RELIGIONS, "Select a religion");
 const religiousSchoolSelect = document.getElementById('religious-school');
 const cultureGroupSelect = document.getElementById('culture-group');
+populateSelect(cultureGroupSelect, Object.keys(CULTURE_OPTIONS), "Select a culture group");
 const primaryCultureSelect = document.getElementById('primary-culture');
 
 // Hidden fields wrappers
@@ -114,7 +119,7 @@ religionSelect.addEventListener('change', () => {
     });
   });
 
-  //Add accepted culture
+  // Add accepted culture
   const addCultureBtn = document.getElementById('add-accepted-culture');
   const culturesContainer = document.getElementById('accepted-cultures-container');
 
@@ -145,6 +150,7 @@ religionSelect.addEventListener('change', () => {
     });
 
     //Remove accepted culture
+    // TO DO: Extract to utils
     const removeButton = document.createElement('button');
     removeButton.type = 'button';
     removeButton.textContent = '🗑️';
@@ -161,3 +167,5 @@ religionSelect.addEventListener('change', () => {
     // Add to container
     culturesContainer.appendChild(wrapper);
     });
+
+  // Add historical friends

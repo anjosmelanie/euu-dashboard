@@ -27,90 +27,44 @@
       <form id="dataForm">
 
         <div class="horizontal">
-        <!-- Country Name (for the file title)-->
-        <label for="name">Country name:</label>
-        <input type="text" id="name" required>
+          <!-- Country Name (for the file title)-->
+          <label for="name">Country name:</label>
+          <input type="text" id="name" required>
 
-        <!-- Country Tag (for the file title)-->
-        <label for="tag">Country tag:</label>
-        <input type="text" id="tag" maxlength="3" required>
-      </div>
+          <!-- Country Tag (for the file title)-->
+          <label for="tag">Country tag:</label>
+          <input type="text" id="tag" maxlength="3" required>
+        </div>
 
          <!-- Government -->
+          <div class="horizontal">
         <label for="government">Government:</label>
         <select id="government" required>
           <option value="">-- Please choose a government type --</option>
-          <option value="monarchy">monarchy</option>
-          <option value="republic">republic</option>
-          <option value="religion">religion</option>
-          <option value="tribal">tribal</option>
-          <option value="monastic">monastic</option>
-          <option value="dictatorship">dictatorship</option>
-          <option value="nomad">nomad</option>
-          <option value="papacy">papacy</option>
         </select>
+      </div>
 
-        <!-- Government reform (in script)-->
+        <!-- Government reform -->
+        <div class="horizontal">
         <label for="government-reform">Government reform:</label>
         <select id="government-reform">
           <option value="">-- Select a government reform --</option>
         </select>
+      </div>
 
         <!-- Technology group -->
-        <label for="technology-group">Government:</label>
+        <div class="horizontal">
+        <label for="technology-group">Technology group:</label>
         <select id="technology-group" required>
           <option value="">-- Please choose a technology group --</option>
-          <option value="western">western</option>
-          <option value="high american">high american</option>
-          <option value="eastern">eastern</option>
-          <option value="anatolian">anatolian</option>
-          <option value="muslim">muslim</option>
-          <option value="indian">indian</option>
-          <option value="chinese">chinese</option>
-          <option value="east african">east african</option>
-          <option value="west african">west african</option>
-          <option value="central african">central african</option>
-          <option value="nomadic">nomadic</option>
-          <option value="mesoamerican">mesoamerican</option>
-          <option value="andean">andean</option>
-          <option value="north american">north american</option>
-          <option value="south american">south american</option>
-          <option value="aboriginal">aboriginal</option>
-          <option value="polynesian">polynesian</option>
         </select>
+      </div>
 
         <!-- Religion -->
+        <div class="horizontal">
         <label for="religion">Religion:</label>
         <select id="religion" required>
           <option value="">-- Select a religion --</option>
-          <option value="catholic">Catholic</option>
-          <option value="protestant">Protestant</option>
-          <option value="reformed">Reformed</option>
-          <option value="orthodox">Orthodox</option>
-          <option value="coptic">Coptic</option>
-          <option value="anglican">Anglican</option>
-          <option value="hussite">Hussite</option>
-          <option value="sunni">Sunni</option>
-          <option value="shia">Shia</option>
-          <option value="ibadi">Ibadi</option>
-          <option value="mahayana">Mahayana</option>
-          <option value="theravada">Theravada</option>
-          <option value="vajrayana">Vajrayana</option>
-          <option value="confucian">Confucian</option>
-          <option value="shinto">Shinto</option>
-          <option value="animist">Animist</option>
-          <option value="fetishist">Fetishist</option>
-          <option value="totemist">Totemist</option>
-          <option value="inti">Inti</option>
-          <option value="mayan">Mayan</option>
-          <option value="nahuatl">Nahuatl</option>
-          <option value="tengri">Tengri</option>
-          <option value="norse">Norse</option>
-          <option value="alcheringa">Alcheringa</option>
-          <option value="hindu">Hindu</option>
-          <option value="sikh">Sikh</option>
-          <option value="jewish">Jewish</option>
-          <option value="zoroastrian">Zoroastrian</option>
         </select>
 
         <!-- Religious school (in script)-->
@@ -120,82 +74,13 @@
             <option value="">-- Select a religious school --</option>
           </select>
         </div>
+      </div>
 
         <div class="horizontal">
         <!-- Culture Group (enabler for primary culture dropdown) -->
         <label for="culture-group">Culture Group:</label>
         <select id="culture-group" required>
           <option value="">-- Please choose a culture group --</option>
-          <option value="Aboriginal">Aboriginal</option>
-          <option value="Altaic">Altaic</option>
-          <option value="Andean">Andean</option>
-          <option value="Apachean">Apachean</option>
-          <option value="Araucanian">Araucanian</option>
-          <option value="Aridoamerican">Aridoamerican</option>
-          <option value="Baltic">Baltic</option>
-          <option value="British">British</option>
-          <option value="Burman">Burman</option>
-          <option value="Byzantine">Byzantine</option>
-          <option value="Caddoan">Caddoan</option>
-          <option value="Caribbean">Caribbean</option>
-          <option value="Carpathian">Carpathian</option>
-          <option value="Caucasian">Caucasian</option>
-          <option value="Celtic">Celtic</option>
-          <option value="Central Algonquian">Central Algonquian</option>
-          <option value="Central American">Central American</option>
-          <option value="Central Indian">Central Indian</option>
-          <option value="Chibchan">Chibchan</option>
-          <option value="Chinese">Chinese</option>
-          <option value="Cushitic">Cushitic</option>
-          <option value="Dravidian">Dravidian</option>
-          <option value="East Bantu">East Bantu</option>
-          <option value="Eastern Algonquian">Eastern Algonquian</option>
-          <option value="Eastern Aryan">Eastern Aryan</option>
-          <option value="East Slavic">East Slavic</option>
-          <option value="Eskaleut">Eskaleut</option>
-          <option value="Evenki">Evenki</option>
-          <option value="French">French</option>
-          <option value="Germanic">Germanic</option>
-          <option value="Great Lakes">Great Lakes</option>
-          <option value="Iberian">Iberian</option>
-          <option value="Iranian">Iranian</option>
-          <option value="Iroquoian">Iroquoian</option>
-          <option value="Japanese">Japanese</option>
-          <option value="Je">Je</option>
-          <option value="Kamchatkan">Kamchatkan</option>
-          <option value="Kongo">Kongo</option>
-          <option value="Korean">Korean</option>
-          <option value="Latin">Latin</option>
-          <option value="Levantine">Levantine</option>
-          <option value="Lost Cultures">Lost Cultures</option>
-          <option value="Maghrebi">Maghrebi</option>
-          <option value="Malay">Malay</option>
-          <option value="Mande">Mande</option>
-          <option value="Marañón">Marañón</option>
-          <option value="Matacoan">Matacoan</option>
-          <option value="Mayan">Mayan</option>
-          <option value="Mon-Khmer">Mon-Khmer</option>
-          <option value="Muskogean">Muskogean</option>
-          <option value="Na-Déné">Na-Déné</option>
-          <option value="Nordic">Nordic</option>
-          <option value="Otomanguean">Otomanguean</option>
-          <option value="Pacific">Pacific</option>
-          <option value="Penutian">Penutian</option>
-          <option value="Plains Algonquian">Plains Algonquian</option>
-          <option value="Sahelian">Sahelian</option>
-          <option value="Slavic">Slavic</option>
-          <option value="Sonoran">Sonoran</option>
-          <option value="Southern African">Southern African</option>
-          <option value="South Slavic">South Slavic</option>
-          <option value="Sudanese">Sudanese</option>
-          <option value="Tai">Tai</option>
-          <option value="Tatar">Tatar</option>
-          <option value="Tibetan">Tibetan</option>
-          <option value="Tupi">Tupi</option>
-          <option value="Ugric">Ugric</option>
-          <option value="West African">West African</option>
-          <option value="Western Aryan">Western Aryan</option>
-          <option value="West Slavic">West Slavic</option>
         </select>
 
         <!-- Primary Culture (in script)-->
@@ -204,6 +89,7 @@
           <option value="">-- Select a primary culture --</option>
         </select>
       </div>
+
         <!-- Add accepted culture(s)-->
         <div id="accepted-cultures-container"></div>
 
