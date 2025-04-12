@@ -1,6 +1,6 @@
 // Imports from other js files
 import { CULTURE_OPTIONS, TRIGGER_RELIGIONS, RELIGIOUS_SCHOOL_OPTIONS, GOVERNMENT_REFORM_OPTIONS } from './constants.js';
-import { defaultOption } from './utils.js';
+import { defaultOption, populateSelect } from './utils.js';
 
 // Constants for history/countries
 const nameInput = document.getElementById('name');
@@ -125,33 +125,38 @@ religionSelect.addEventListener('change', () => {
 
       // Wrapper div for layout
     const wrapper = document.createElement('div');
+    wrapper.classList.add('horizontal');
     wrapper.classList.add('accepted-culture-pair');
 
     // Create culture group select
     const cultureGroupSelect = document.createElement('select');
-    cultureGroupSelect.name = `acceptedCultureGroup${acceptedCultureCount}`;
-    cultureGroupSelect.innerHTML = `
-      <option value="">-- Select culture group --</option>
-      <option value="latin">Latin</option>
-      <option value="germanic">Germanic</option>
-      <option value="slavic">Slavic</option>
-      <!-- Add more as needed -->
-    `;
-
-    // Create primary culture select
     const cultureSelect = document.createElement('select');
+
+    cultureGroupSelect.name = `acceptedCultureGroup${acceptedCultureCount}`;
     cultureSelect.name = `acceptedCulture${acceptedCultureCount}`;
-    cultureSelect.innerHTML = `
-      <option value="">-- Select culture --</option>
-      <option value="castilian">Castilian</option>
-      <option value="franconian">Franconian</option>
-      <option value="serbian">Serbian</option>
-      <!-- Add more as needed -->
-    `;
+    populateSelect(cultureGroupSelect, Object.keys(CULTURE_OPTIONS), 'Select a CULture group');
+    populateSelect(cultureSelect, [], '-- Select culture group first --');
+
+    // Create accepted culture select
+    cultureGroupSelect.addEventListener('change', () => {
+      const selectedGroup = cultureGroupSelect.value;
+      const cultures = CULTURE_OPTIONS[selectedGroup] || [];
+      populateSelect(cultureSelect, cultures, '-- Select CULture --');
+    });
+
+    //Remove accepted culture
+    const removeButton = document.createElement('button');
+    removeButton.type = 'button';
+    removeButton.textContent = '🗑️';
+    removeButton.classList.add('remove-btn');
+    removeButton.addEventListener('click', () => {
+      wrapper.remove();
+    });
 
     // Append to wrapper
     wrapper.appendChild(cultureGroupSelect);
     wrapper.appendChild(cultureSelect);
+    wrapper.appendChild(removeButton);
 
     // Add to container
     culturesContainer.appendChild(wrapper);
