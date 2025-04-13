@@ -1,5 +1,9 @@
-export function defaultOption(label) {
-    return `<option value="">-- Select a ${label} --</option>`;
+export function dropdownDefaultValue(label) {
+  return startsWithVowel(label) ? `-- Select an ${label} --` : `-- Select a ${label} --`;
+  }
+
+  function startsWithVowel(str) {
+    return /^[aeiou]/i.test(str.trim());
   }
 
   export function populateSelect(selectEl, optionsArray, placeholder = '-- Select an option --') {
@@ -64,14 +68,6 @@ export function defaultOption(label) {
     return `${paddedDay}/${paddedMonth}/${targetYear}`;
   }
 
-  //deprecated lol
-  export function getRandomRGB() {
-    return [
-      Math.floor(Math.random() * 256),
-      Math.floor(Math.random() * 256),
-      Math.floor(Math.random() * 256)
-    ];
-  }
 
   export function getPrettyRGB() {
     const hue = Math.floor(Math.random() * 360);

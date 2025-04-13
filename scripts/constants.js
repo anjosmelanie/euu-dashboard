@@ -199,3 +199,7 @@ export const RESTRICTED_IDEA_GROUPS = [
   'theocracy_gov_ideas',
   'aristocracy_ideas'
 ];
+
+export const LOCAL_STORAGE_COMMON = "euuCommonCountryFiles";
+export const LOCAL_STORAGE_HISTORY = "euuHistoryCountriesForms";
+export const LOCAL_STORAGE_TAGS = "euuGeneratedEntries";

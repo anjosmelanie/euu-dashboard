@@ -1,19 +1,19 @@
 // Imports from other js files
 import { CULTURE_OPTIONS, TRIGGER_RELIGIONS, RELIGIOUS_SCHOOL_OPTIONS, GOVERNMENT_REFORM_OPTIONS,
    TECHNOLOGY_GROUPS, RELIGIONS } from './constants.js';
-import { defaultOption, populateSelect, makeUppercaseOnInput, downloadFile, convertModernBirthDateTo1444 } from './utils.js';
+import { dropdownDefaultValue, populateSelect, makeUppercaseOnInput, downloadFile, convertModernBirthDateTo1444 } from './utils.js';
 
 // Constants for history/countries
 const governmentSelect = document.getElementById('government');
-populateSelect(governmentSelect, Object.keys(GOVERNMENT_REFORM_OPTIONS), "Select a government type");
+populateSelect(governmentSelect, Object.keys(GOVERNMENT_REFORM_OPTIONS), dropdownDefaultValue("government reform"));
 const governmentReformSelect = document.getElementById('government-reform');
 const technologyGroupSelect = document.getElementById('technology-group');
-populateSelect(technologyGroupSelect, TECHNOLOGY_GROUPS, "Select a technology group");
+populateSelect(technologyGroupSelect, TECHNOLOGY_GROUPS, dropdownDefaultValue("technology group"));
 const religionSelect = document.getElementById('religion');
-populateSelect(religionSelect, RELIGIONS, "Select a religion");
+populateSelect(religionSelect, RELIGIONS, dropdownDefaultValue("religion"));
 const religiousSchoolSelect = document.getElementById('religious-school');
 const cultureGroupSelect = document.getElementById('culture-group');
-populateSelect(cultureGroupSelect, Object.keys(CULTURE_OPTIONS), "Select a culture group");
+populateSelect(cultureGroupSelect, Object.keys(CULTURE_OPTIONS), dropdownDefaultValue("culture group"));
 const primaryCultureSelect = document.getElementById('primary-culture');
 const religiousSchoolWrapper = document.getElementById('schoolWrapper');
 
@@ -50,7 +50,7 @@ governmentSelect.addEventListener('change', () => {
   const reforms = GOVERNMENT_REFORM_OPTIONS[selectedGovernment] || [];
 
   // Clear current template options
-  governmentReformSelect.innerHTML = defaultOption('government reform');
+  governmentReformSelect.innerHTML = dropdownDefaultValue('government reform');
 
   // Populate new ones
   reforms.forEach(reform => {
@@ -73,7 +73,7 @@ religionSelect.addEventListener('change', () => {
     }
 
     // Clear current template options
-    religiousSchoolSelect.innerHTML = defaultOption('religious school');
+    religiousSchoolSelect.innerHTML = dropdownDefaultValue('religious school');
 
     // Populate new ones
     schools.forEach(school => {
@@ -90,7 +90,7 @@ religionSelect.addEventListener('change', () => {
     const cultures = CULTURE_OPTIONS[selectedCultureGroup] || [];
   
     // Clear current template options
-    primaryCultureSelect.innerHTML = defaultOption('primary culture');
+    primaryCultureSelect.innerHTML = dropdownDefaultValue('primary culture');
   
     // Populate new ones
     cultures.forEach(culture => {
@@ -153,17 +153,16 @@ religionSelect.addEventListener('change', () => {
     cultureSelect.name = `acceptedCulture${acceptedCultureCount}`;
   
     // Populate both selects
-    populateSelect(cultureGroupSelect, Object.keys(CULTURE_OPTIONS), 'Select a CUlture group');
-    populateSelect(cultureSelect, [], '-- Select culture group first --');
+    populateSelect(cultureGroupSelect, Object.keys(CULTURE_OPTIONS), dropdownDefaultValue("culture group"));
+    populateSelect(cultureSelect, [], dropdownDefaultValue("accepted culture"));
   
     // Hook up dynamic culture loading
     cultureGroupSelect.addEventListener('change', () => {
       const selectedGroup = cultureGroupSelect.value;
       const cultures = CULTURE_OPTIONS[selectedGroup] || [];
-      populateSelect(cultureSelect, cultures, '-- Select CULture --');
+      populateSelect(cultureSelect, cultures, dropdownDefaultValue("accepted culture"));
       console.log(cultures);
     });
-  
 
 
     // Create remove button
@@ -296,7 +295,7 @@ religionSelect.addEventListener('change', () => {
     document.getElementById('religious-school').value = data.religiousschool || '';
 
     const groupSelect = document.getElementById('culture-group');
-    populateSelect(groupSelect, Object.keys(CULTURE_OPTIONS), 'Please choose a culture group');
+    populateSelect(groupSelect, Object.keys(CULTURE_OPTIONS), dropdownDefaultValue("accepted culture"));
     groupSelect.value = data.culturegroup || '';
     groupSelect.dispatchEvent(new Event('change')); // 💥 triggers population of primary cultures
 
