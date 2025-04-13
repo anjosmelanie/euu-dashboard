@@ -16,4 +16,37 @@ function renderNavbar() {
     }
   }
 
+  function renderFooter() {
+    const footerHTML = `
+      <footer class="footer">
+        <div class="footer-content">
+          <span>&copy; 2025 anjosmelanie</span>
+        <a href="https://github.com/anjosmelanie" target="_blank" aria-label="GitHub">
+          <img src="icons/git.png" alt="GitHub" height="20" />
+        </a>
+        </div>
+      </footer>
+    `;
+  
+    const placeholder = document.getElementById('footer');
+    if (placeholder) {
+      placeholder.outerHTML = footerHTML;
+    }
+  }
+
+  // deprecated
+  function renderHeader(title = 'EUU Modding Tool') {
+    const headerHTML = `
+      <header class="header">
+        <h1>${title}</h1>
+      </header>
+    `;
+  
+    const placeholder = document.getElementById('header');
+    if (placeholder) {
+      placeholder.outerHTML = headerHTML;
+    }
+  }
+
   renderNavbar();
+  renderFooter();
