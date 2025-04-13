@@ -235,6 +235,7 @@ document.querySelectorAll('.reroll-color').forEach(button => {
     document.querySelector('.rev-color-b').value = data.revColor?.[2] || 0;
   
     const selects = document.querySelectorAll('.idea-select');
+    populateIdeaSelects();
     selects.forEach((s, i) => {
       s.value = data.ideaGroups?.[i] || '';
     });
