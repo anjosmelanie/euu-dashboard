@@ -1,7 +1,7 @@
 // Imports from other js files
 import { CULTURE_OPTIONS, TRIGGER_RELIGIONS, RELIGIOUS_SCHOOL_OPTIONS, GOVERNMENT_REFORM_OPTIONS,
    TECHNOLOGY_GROUPS, RELIGIONS } from './constants.js';
-import { dropdownDefaultValue, populateSelect, makeUppercaseOnInput, downloadFile, convertModernBirthDateTo1444 } from './utils.js';
+import { dropdownDefaultValue, populateSelect, makeUppercaseOnInput, downloadFile, convertModernBirthDateTo1444, getRandomStat } from './utils.js';
 
 // Constants for history/countries
 const governmentSelect = document.getElementById('government');
@@ -574,3 +574,29 @@ religionSelect.addEventListener('change', () => {
     renderSaveManager();
     updatePreviewFromForm();
   });
+
+  function getCultureGroup(culture) {
+    for (const group in CULTURE_OPTIONS) {
+      console.log(group + ", " + culture);
+      if (CULTURE_OPTIONS[group].includes(culture)) {
+        return group;
+      }
+    }
+    return null;
+  }
+
+  document.getElementById("culture-search").addEventListener("input", (e) => {
+    const culture = e.target.value.trim().toLowerCase();
+    const group = getCultureGroup(culture);
+    document.getElementById("group-result").textContent =
+      group ? `Group: ${group}` : "Culture not found";
+  });
+
+  function randomizeStats() {
+    document.getElementById("adm-skill").value = getRandomStat();
+    document.getElementById("dip-skill").value = getRandomStat();
+    document.getElementById("mil-skill").value = getRandomStat();
+  }
+
+  randomizeStats();
+  document.getElementById("reroll-stats").addEventListener("click", randomizeStats);

@@ -89,3 +89,7 @@ export function dropdownDefaultValue(label) {
   
     return [f(0), f(8), f(4)];
   }
+
+  export function getRandomStat(min = 1, max = 6) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
