@@ -430,11 +430,6 @@ religionSelect.addEventListener('change', () => {
     });
   }
   
-  document.getElementById('loadCountryBtn').addEventListener('click', () => {
-    const key = document.getElementById('savedCountriesSelect').value;
-    if (key) loadCountry(key);
-  });
-  
   populateSavedCountries(); // call this on page load
 
   function renderSaveManager() {

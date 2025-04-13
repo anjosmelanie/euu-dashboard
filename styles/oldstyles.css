@@ -1,0 +1,129 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    min-width: 700px;
+    max-width: 700px;
+    margin: auto;
+  }
+
+  #form-section{
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    max-block-size: 80cqb; /* 100% of main's height */
+    padding-right: 0.5rem;
+    scrollbar-width: thin;
+  }
+
+  #form-section::-webkit-scrollbar,
+  #save-manager::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  #form-section::-webkit-scrollbar-thumb,
+  #save-manager::-webkit-scrollbar-thum {
+    background-color: #aaa;
+    border-radius: 4px;
+  }
+
+  .container {
+    display: flex;
+    overflow: hidden;
+    flex: 1;
+    min-height: 0; 
+  }
+
+  .form-column, .preview-column, .sidebar-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .preview-column {
+    background-color: #ffffff;
+  }
+
+  input, textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+
+
+  .countryTag {
+    width: 4ch;
+    text-align: center;
+  }  
+  
+  .name-tag {
+    width: 35ch; 
+  }
+
+  .capital-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  
+  .checkbox-inline {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+  }
+
+  .capital-group input[type="number"] {
+    width: 8ch;
+  }
+
+  .dateinput {
+    width: 12ch;
+  }
+
+  .skill input[type="number"] {
+    width: 2ch;
+  }
+
+  .color-section input[type="number"]{
+    width: 7ch;
+  }
+
+
+
+  #save-manager {
+    padding: 1rem;
+    background: #f8f8f8;
+    border-left: 2px solid #ccc;
+    font-family: sans-serif;
+    max-width: 300px;
+    max-height: 90vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    max-block-size: 70cqb; /* 100% of main's height */
+    scrollbar-width: thin;
+  }
+  
+
+
+
+
+  .block select {
+    flex: 1;
+  }
+  .block .row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
