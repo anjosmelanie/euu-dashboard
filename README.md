@@ -2,10 +2,20 @@
 European Union Universalis. A mod for the game Europa Universalis IV 1.37.
 
 European Union Universalis is a mod for the game Europa Universalis IV which recreates the current (year 2025) borders of the countries, but it's still set in the original start date of November 11, 1444.
+In this project you will also find my EUU Dashboard, a very simple site built in html and js that I used to generate the country files in a much more appealing way than just copying and pasting a template file and changing stuff manually, leaving it open to errors.
 
 Why? Why not.
 
-Other particularities of this mod:
+## 🚀 Latest Release: EUU Dashboard v1.0
+
+- Scrollable searchable file managers for `history/countries` and `common/countries`
+- Auto-tag generator with real-time preview and local save
+- Tag list manager with delete & download
+- Modular components (header, footer, navbar) for easy maintenance
+
+[Read full patch notes here](CHANGELOG.md)
+
+Prticularities of this mod:
 - Holy Roman Empire: Represents the European Union with the current 27 countries of the union represented as princes of the HRE. Germany is the Emperor at the start of the game.
 Princes: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Spain, Sweden.
 Electors: Germany, France, Italy, Netherlands, Belgium. (These are the founder states of the European Union so it's only fair.)
