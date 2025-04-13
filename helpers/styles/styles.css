@@ -313,3 +313,22 @@ body {
     font-size: 1.8rem;
     font-weight: 600;
   }
+
+  .readonly-entry {
+    background-color: #f3f4f6;
+    color: #555;
+    cursor: default;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+  /* Optional: shrink select spacing if needed */
+.block select {
+  flex: 1;
+}
+.block .row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
