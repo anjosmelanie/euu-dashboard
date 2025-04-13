@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EUU | common/countries</title>
+  <link rel="stylesheet" href="styles/styles.css"> 
+</head>
+<body>
+  <header class="header"><h1>EUU Dashboard | common / countries helper</h1></header>
+  <nav class="navbar"id="navbar"></nav>
+
+<main>
+  <div class="container">
+    <!-- Left column: the form -->
+    <div class="form-column" id="form-section">
+      <h2>Create a country file:</h2>
+      <form id="dataForm">
+
+        <!-- Country Name (for the file title)-->
+        <label for="country-name">Country name:</label>
+        <input type="text" id="country-name" name="country-name" class="nameTag" required>
+
+        <!-- Graphical Culture-->
+        <label for="graphical-culture">Graphical culture:</label>
+        <select id="graphical-culture" name="graphicalCulture" required>
+          <option value="">-- Select graphical culture --</option>
+        </select>
+
+        <!-- Color -->
+        <div class="color-section">
+          <label>Color:</label>
+          <div class="horizontal">
+            <input type="number" min="0" max="255" class="color-r" placeholder="R">
+            <input type="number" min="0" max="255" class="color-g" placeholder="G">
+            <input type="number" min="0" max="255" class="color-b" placeholder="B">
+            <div class="color-preview" id="preview-color"></div>
+            <button type="button" class="reroll-color" data-target="color">🎲</button>
+          </div>
+        </div>
+        
+        <!-- Revolutionary Color-->
+        <div class="color-section">
+          <label>Revolutionary Color:</label>
+          <div class="horizontal">
+            <input type="number" min="0" max="255" class="rev-color-r" placeholder="R">
+            <input type="number" min="0" max="255" class="rev-color-g" placeholder="G">
+            <input type="number" min="0" max="255" class="rev-color-b" placeholder="B">
+            <div class="color-preview" id="preview-rev-color"></div>
+            <button type="button" class="reroll-color" data-target="rev-color">🎲</button>
+          </div>
+        </div>
+
+        <!-- Idea Groups -->
+        <div id="idea-group-container">
+          <label>Idea Groups:</label>
+          <div class="vertical">
+            <select class="idea-select" name="idea1"></select>
+            <select class="idea-select" name="idea2"></select>
+            <select class="idea-select" name="idea3"></select>
+            <select class="idea-select" name="idea4"></select>
+            <select class="idea-select" name="idea5"></select>
+            <select class="idea-select" name="idea6"></select>
+            <select class="idea-select" name="idea7"></select>
+            <select class="idea-select" name="idea8"></select>
+          </div>
+        </div>
+        <button type="button" id="randomize-ideas">🎲 Randomize Ideas</button>
+
+        <!-- TO DO: Historical Units have been skipped due to my sheer ignorance about them. If this results in a problem in the future maybe i'll do an implementation -->
+
+        <!-- Monarch Names and the rest of sections have been skipped too due to massive complications hehe :3 hopefully the game picks them up from primary culture or something -->
+
+      </form>
+    </div>
+
+    <!-- Right column: live preview -->
+    <div class="preview-column">
+      <h2>File Preview</h2>
+      <div id="preview-box" class="preview-box"></div>
+      <div class="horizontal">
+        <label for="file-name">File name:</label>
+        <input type="text" id="file-name" name="file-name" class="name-tag" disabled>
+      </div>
+      <div class="horizontal">
+        <button type="submit" id="reload-preview">Reload preview</button>
+        <button type="submit" id="save-country">Save country data</button>
+        <button type="submit" id="download-country">Download country file</button>
+      </div>
+      
+    </div>
+
+    <div class="sidebar-column" id="save-manager">
+      <select id="savedCountriesSelect">
+        <option value="">-- Load a saved country --</option>
+      </select>
+      <button id="loadCountryBtn">Load</button>
+    </div>
+
+  </div>
+</main>
+
+  <footer id="footer"></footer>
+
+  <script type="module" src="scripts/modules.js"></script> 
+  <script type="module" src="scripts/ccscript.js"></script> 
+</body>
+</html>
+
+<!-- TO DO: Add buttons for: NEW , SAVE, DOWNLOAD and DOWNLOAD ALL (in the right column with stored)-->
+<!-- TO DO: Upload an existing file and fill all the fields on it, allowing to edit them -->
+<!-- TO DO: Standarize select default option texts hehe -->
