@@ -1,4 +1,0 @@
-do the tasks in to_do_per_country.json
-add countries to EU/HRE
-balance institutions/tech levels based on readme.json
-

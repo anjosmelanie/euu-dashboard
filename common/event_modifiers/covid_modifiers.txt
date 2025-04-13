@@ -1,9 +1,0 @@
-covid_infection = {
-    local_unrest = 2
-    local_manpower_modifier = -0.35
-}
-
-covid_local_quarantine = {
-    local_unrest = 3
-    local_tax_modifier = -0.35
-}
