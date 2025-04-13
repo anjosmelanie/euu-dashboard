@@ -43,13 +43,14 @@ One-click export of your generated country tags as a ready-to-use `.txt` file.
 1. Clone this repository:
  ```bash
  git clone https://github.com/your-username/euu-dashboard.git
+```
 
 2. Open index.html in your browser
 
 3. Start generating, pairing, and exporting your mod files 🚀 
   
 📁 File Structure
-bash
+```bash
 Copy
 Edit
 euu-dashboard/
@@ -71,19 +72,32 @@ euu-dashboard/
 ├── CHANGELOG.md                 # Full release notes
 ├── LICENSE                      # MIT License
 └── README.md                    # You are here
-📌 Related Repositories
-🎮 EUU Mod Repository
-The core EU4 mod files — tags, provinces, decisions, events, and more.
+```
+---
 
-🛠️ Roadmap
- Entry editing
+## 🔗 Related Repository
 
- Dark mode
+- 🎮 [EUU Mod Repository](https://github.com/anjosmelanie/euu-mod)  
+  The actual Europa Universalis IV mod files generated and maintained using this dashboard.
 
- Batch generation tools
+---
 
- File import/export
+## 🛠️ Roadmap
 
-🐾 Credits
-Built with love by @anjosmelanie
-Designed for curious modders, nerds, and EU4 enjoyers everywhere.
+- [ ] Entry editing & validation
+- [ ] Batch file generation
+- [ ] Drag-and-drop file importing
+- [ ] Dark mode toggle (obviously 😎)
+
+---
+
+## 🐾 Credits
+
+Built by [@anjosmelanie](https://github.com/anjosmelanie)  
+Created for the joy of scripting, modding, and letting EU4 run all night in observer mode.
+
+---
+
+## 📜 License
+
+[MIT](./LICENSE)
