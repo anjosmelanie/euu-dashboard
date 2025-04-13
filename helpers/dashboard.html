@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EUU Dashboard | Home</title>
+  <link rel="stylesheet" href="styles/styles.css"> 
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f3f4f6;
+      color: #111;
+    }
+    .dashboard {
+      display: flex;
+      height: 100vh;
+    }
+    .section {
+      padding: 1rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+    .section.left, .section.middle {
+      width: 30%;
+      border-right: 1px solid #ccc;
+    }
+    .section.right {
+      width: 40%;
+    }
+    .section h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+    .search-container {
+      margin-bottom: 0.5rem;
+    }
+    .search-container input {
+      width: 100%;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .file-list {
+      flex-grow: 1;
+      overflow-y: auto;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0.5rem;
+    }
+    .file-item {
+      padding: 0.3rem 0.5rem;
+      border-bottom: 1px solid #eee;
+      font-size: 0.9rem;
+    }
+    .file-count {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar"id="navbar"></nav>
+    
+  <div class="dashboard">
+    <div class="section left">
+      <h2>History Countries</h2>
+      <div class="search-container">
+        <input type="text" id="search-history" placeholder="Search history files..." />
+      </div>
+      <div id="history-list" class="file-list"></div>
+      <div id="history-count" class="file-count"></div>
+    </div>
+
+    <div class="section middle">
+      <h2>Common Countries</h2>
+      <div class="search-container">
+        <input type="text" id="search-common" placeholder="Search common files..." />
+      </div>
+      <div id="common-list" class="file-list"></div>
+      <div id="common-count" class="file-count"></div>
+    </div>
+
+    <div class="section right">
+      <h2>Details</h2>
+      <!-- Reserved for later -->
+    </div>
+  </div>
+
+  <script type="module" src="scripts/modules.js"></script> 
+  <script type="module" src="scripts/homescript.js"></script> 
+</body>
+</html>
