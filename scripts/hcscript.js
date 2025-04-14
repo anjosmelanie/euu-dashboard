@@ -5,7 +5,7 @@ import { dropdownDefaultValue, populateSelect, makeUppercaseOnInput, downloadFil
 
 // Constants for history/countries
 const governmentSelect = document.getElementById('government');
-populateSelect(governmentSelect, Object.keys(GOVERNMENT_REFORM_OPTIONS), dropdownDefaultValue("government reform"));
+populateSelect(governmentSelect, Object.keys(GOVERNMENT_REFORM_OPTIONS), dropdownDefaultValue("government type"));
 const governmentReformSelect = document.getElementById('government-reform');
 const technologyGroupSelect = document.getElementById('technology-group');
 populateSelect(technologyGroupSelect, TECHNOLOGY_GROUPS, dropdownDefaultValue("technology group"));
@@ -429,7 +429,7 @@ religionSelect.addEventListener('change', () => {
       select.appendChild(opt);
     });
   }
-  
+
   populateSavedCountries(); // call this on page load
 
   function renderSaveManager() {
@@ -565,11 +565,6 @@ religionSelect.addEventListener('change', () => {
     return `${year}.${parseInt(month)}.${parseInt(day)}`;
   }
 
-  window.addEventListener('DOMContentLoaded', () => {
-    renderSaveManager();
-    updatePreviewFromForm();
-  });
-
   function getCultureGroup(culture) {
     for (const group in CULTURE_OPTIONS) {
       console.log(group + ", " + culture);
@@ -593,5 +588,10 @@ religionSelect.addEventListener('change', () => {
     document.getElementById("mil-skill").value = getRandomStat();
   }
 
-  randomizeStats();
   document.getElementById("reroll-stats").addEventListener("click", randomizeStats);
+
+  window.addEventListener('DOMContentLoaded', () => {
+    renderSaveManager();
+    updatePreviewFromForm();
+    randomizeStats();
+  });

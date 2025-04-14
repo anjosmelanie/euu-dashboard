@@ -1,189 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EUU | history/countries</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header class="header"><h1>EUU Dashboard | history / countries helper</h1></header>
-  <nav class="navbar"id="navbar"></nav>
+  <header class="header">
+    <h1>EUU Dashboard | history / countries helper</h1>
+  </header>
+  <nav class="navbar" id="navbar"></nav>
 
-<main>
-  <div class="container">
-    <!-- Left column: the form -->
-    <div class="form-section" id="form-section">
-      <h2>Create a country file</h2>
-      <form id="dataForm">
+  <main>
+    <div class="container">
+      <!-- Left column: the form -->
+      <div class="form-section" id="form-section">
+        <h2>Create a country file</h2>
+        <form id="dataForm">
 
-        <div class="horizontal">
-          <!-- Country Name (for the file title)-->
-          <label for="country-name">Country name:</label>
-          <input type="text" id="country-name" name="country-name" class="nameTag" required>
-
-          <!-- Country Tag (for the file title)-->
-          <label for="country-tag">Country tag:</label>
-          <input type="text" id="country-tag" name ="country-tag" maxlength="3" class="countryTag" required>
-        </div>
-
-        <!-- Capital -->
-        <div class="capital-group">
-          <label for="province-id">Capital:</label>
-          <input type="number" id="capital-province" name="capital-province" min="1" max="4941" step="1">
-
-          <label class="checkbox-inline">
-            <input type="checkbox" id="fixed-capital" name="fixed-capital">
-            Fixed capital
-          </label>
-          </div>
-        
-
-         <!-- Government -->
           <div class="horizontal">
-        <label for="government">Government:</label>
-        <select id="government" required>
-          <option value="">-- Please choose a government type --</option>
-        </select>
+            <!-- Country Name (for the file title)-->
+            <label for="country-name">Country name:</label>
+            <input type="text" id="country-name" name="country-name" class="nameTag" required>
+
+            <!-- Country Tag (for the file title)-->
+            <label for="country-tag">Country tag:</label>
+            <input type="text" id="country-tag" name="country-tag" maxlength="3" class="countryTag" required>
+          </div>
+
+          <!-- Capital -->
+          <div class="horizontal">
+            <label for="province-id">Capital:</label>
+            <input type="number" id="capital-province" name="capital-province" min="1" max="4941" step="1">
+
+            <label class="checkbox-inline">
+              <input type="checkbox" id="fixed-capital" name="fixed-capital">
+              Fixed capital
+            </label>
+          </div>
+
+          <!-- Government -->
+          <div class="horizontal">
+            <label for="government">Government:</label>
+            <select id="government" required>
+              <option value="">-- Please choose a government type --</option>
+            </select>
+          </div>
+
+          <!-- Government reform -->
+          <div class="horizontal">
+            <label for="government-reform">Government reform:</label>
+            <select id="government-reform">
+              <option value="">-- Select a government reform --</option>
+            </select>
+          </div>
+
+          <!-- Technology group -->
+          <div class="horizontal">
+            <label for="technology-group">Technology group:</label>
+            <select id="technology-group" required>
+              <option value="">-- Please choose a technology group --</option>
+            </select>
+          </div>
+
+          <!-- Religion -->
+          <div class="horizontal">
+            <label for="religion">Religion:</label>
+            <select id="religion" name="religion" required>
+              <option value="">-- Select a religion --</option>
+            </select>
+
+            <!-- Religious school (in script)-->
+            <div id="schoolWrapper" style="display: none; margin-top: 1rem;">
+              <label for="religious-school" name="religious-school">Religious school:</label>
+              <select id="religious-school">
+                <option value="">-- Select a religious school --</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Culture search helper-->
+          <div class="horizontal">
+            <label for="culture-search">Search for a culture:</label>
+            <input type="text" id="culture-search" name="culture-search" placeholder="Enter culture..." />
+            <div id="group-result"></div>
+          </div>
+
+          <div class="horizontal">
+            <!-- Culture Group (enabler for primary culture dropdown) -->
+            <label for="culture-group">Culture Group:</label>
+            <select id="culture-group" name="culture-group" required>
+              <option value="">-- Please choose a culture group --</option>
+            </select>
+
+            <!-- Primary Culture (in script)-->
+            <label for="primary-culture">Primary Culture:</label>
+            <select id="primary-culture" name="primary-culture" required>
+              <option value="">-- Select a primary culture --</option>
+            </select>
+          </div>
+
+          <div class="section-divider">
+            <span>Optional Fields</span>
+          </div>
+
+          <!-- Add accepted culture(s)-->
+          <div class="vertical">
+            <div id="accepted-cultures-container"></div>
+            <button type="button" id="add-accepted-culture">+ Add Accepted Culture</button>
+
+            <!-- Add historical friend(s)-->
+            <div id="historical-friends-container"></div>
+            <button type="button" id="add-historical-friend">+ Add Historical Friend</button>
+
+            <!-- Add historical rival(s)-->
+            <div id="historical-rivals-container"></div>
+            <button type="button" id="add-historical-rival">+ Add Historical Rival</button>
+          </div>
+
+
+          <div class="section-divider">
+            <span>Head of State</span>
+          </div>
+
+          <div class="horizontal">
+            <label for="monarch-name">Monarch name:</label>
+            <input type="text" id="monarch-name" name="monarch-name" class="dynastyname" required>
+
+            <label for="dynasty">Dynasty:</label>
+            <input type="text" id="dynasty" name="dynasty" class="dynastyname" required>
+          </div>
+
+          <div class="horizontal">
+            <label for="birth-dat">Birth date:</label>
+            <input type="text" id="birth-date" class="dateinput" name="birth-dat" placeholder="DD/MM/YYYY"
+              pattern="\d{2}/\d{2}/\d{4}">
+
+            <label for="eu4-birth-date">EU4 date:</label>
+            <input type="text" id="eu4-birth-date" class="dateinput" name="eu4-birth-date" placeholder="11/11/1444"
+              pattern="\d{2}/\d{2}/\d{4}">
+          </div>
+
+          <div class="horizontal">
+            <label for="adm-skill">
+              <img src="icons/adm.png" alt="Administrative skill" title="Administrative skill" class="icon-label">
+            </label>
+            <input type="number" id="adm-skill" class=skill" name="adm-skill" min="0" max="6" step="1">
+
+            <label for="dip-skill">
+              <img src="icons/dip.png" alt="Diplomatic skill" title="Diplomatic skill" class="icon-label">
+            </label>
+            <input type="number" id="dip-skill" class=skill" name="dip-skill" min="0" max="6" step="1">
+
+            <label for="mil-skill">
+              <img src="icons/mil.png" alt="Military skill" title="Military skill" class="icon-label">
+            </label>
+            <input type="number" id="mil-skill" class=skill" name="mil-skill" min="0" max="6" step="1">
+
+            <button id="reroll-stats" title="Randomize stats">🎲</button>
+          </div>
+
+        </form>
       </div>
 
-        <!-- Government reform -->
+      <!-- Right column: live preview -->
+      <div class="preview-section">
+        <h2>File Preview</h2>
+        <div id="preview-box" class="preview-box"></div>
         <div class="horizontal">
-        <label for="government-reform">Government reform:</label>
-        <select id="government-reform">
-          <option value="">-- Select a government reform --</option>
-        </select>
-      </div>
-
-        <!-- Technology group -->
-        <div class="horizontal">
-        <label for="technology-group">Technology group:</label>
-        <select id="technology-group" required>
-          <option value="">-- Please choose a technology group --</option>
-        </select>
-      </div>
-
-        <!-- Religion -->
-        <div class="horizontal">
-        <label for="religion">Religion:</label>
-        <select id="religion" name="religion" required>
-          <option value="">-- Select a religion --</option>
-        </select>
-
-        <!-- Religious school (in script)-->
-        <div id="schoolWrapper" style="display: none; margin-top: 1rem;">
-          <label for="religious-school" name="religious-school">Religious school:</label>
-          <select id="religious-school">
-            <option value="">-- Select a religious school --</option>
-          </select>
+          <label for="file-name">File name:</label>
+          <input type="text" id="file-name" name="file-name" class="name-tag" disabled>
         </div>
-      </div>
-
-      <div class="horizontal">
-        <input id="culture-search" placeholder="Enter culture..." />
-        <div id="group-result"></div>
-      </div>
-
         <div class="horizontal">
-        <!-- Culture Group (enabler for primary culture dropdown) -->
-        <label for="culture-group">Culture Group:</label>
-        <select id="culture-group" name="culture-group" required>
-          <option value="">-- Please choose a culture group --</option>
-        </select>
-
-        <!-- Primary Culture (in script)-->
-        <label for="primary-culture">Primary Culture:</label>
-        <select id="primary-culture" name="primary-culture" required>
-          <option value="">-- Select a primary culture --</option>
-        </select>
-      </div>
-
-      <div class="section-divider">
-        <span>Optional Fields</span>
-      </div>
-
-        <!-- Add accepted culture(s)-->
-        <div id="accepted-cultures-container"></div>
-        <button type="button" id="add-accepted-culture">+ Add Accepted Culture</button>
-        
-        <!-- Add historical friend(s)-->
-        <div id="historical-friends-container"></div>
-        <button type="button" id="add-historical-friend">+ Add Historical Friend</button>
-
-        <!-- Add historical rival(s)-->
-        <div id="historical-rivals-container"></div>
-        <button type="button" id="add-historical-rival">+ Add Historical Rival</button>
-
-        <div class="section-divider">
-          <span>Head of State</span>
+          <button type="submit" id="reload-preview">Reload preview</button>
+          <button type="submit" id="save-country">Save country data</button>
+          <button type="submit" id="download-country">Download country file</button>
         </div>
 
-        <div class="horizontal">
-          <label for="monarch-name">Monarch name:</label>
-          <input type="text" id="monarch-name" name="monarch-name" class="dynastyname" required>
+      </div>
 
-          <label for="dynasty">Dynasty:</label>
-          <input type="text" id="dynasty" name="dynasty" class="dynastyname" required>
-        </div>
+      <div class="manager-section">
+        <h2>File Manager</h2>
+        <div id="save-manager"></div>
+      </div>
 
-        <div class="horizontal">
-          <label for="birth-dat">Birth date:</label>
-          <input type="text" id="birth-date" class="dateinput" name="birth-dat" placeholder="DD/MM/YYYY" pattern="\d{2}/\d{2}/\d{4}">
-
-          <label for="eu4-birth-date">EU4 date:</label>
-          <input type="text" id="eu4-birth-date" class="dateinput" name="eu4-birth-date" placeholder="11/11/1444" pattern="\d{2}/\d{2}/\d{4}">
-
-          <label for="adm-skill">
-            <img src="icons/adm.png" alt="Administrative skill" title="Administrative skill" class="icon-label">
-          </label>
-          <input type="number" id="adm-skill" class=skill" name="adm-skill" min="0" max="6" step="1">
-
-          <label for="dip-skill">
-            <img src="icons/dip.png" alt="Diplomatic skill" title="Diplomatic skill" class="icon-label">
-          </label>
-          <input type="number" id="dip-skill" class=skill" name="dip-skill" min="0" max="6" step="1">
-
-          <label for="mil-skill">
-            <img src="icons/mil.png" alt="Military skill" title="Military skill" class="icon-label">
-          </label>
-          <input type="number" id="mil-skill" class=skill" name="mil-skill" min="0" max="6" step="1">
-
-          <button id="reroll-stats" title="Randomize stats">🎲</button>
-        </div>
-
-      </form>
     </div>
-
-    <!-- Right column: live preview -->
-    <div class="preview-section">
-      <h2>File Preview</h2>
-      <div id="preview-box" class="preview-box"></div>
-      <div class="horizontal">
-        <label for="file-name">File name:</label>
-        <input type="text" id="file-name" name="file-name" class="name-tag" disabled>
-      </div>
-      <div class="horizontal">
-        <button type="submit" id="reload-preview">Reload preview</button>
-        <button type="submit" id="save-country">Save country data</button>
-        <button type="submit" id="download-country">Download country file</button>
-      </div>
-      
-    </div>
-
-    <div class="manager-section">
-      <h2>File Manager</h2>
-      <div id="save-manager"></div>
-    </div>
-
-  </div>
-</main>
+  </main>
 
   <footer id="footer"></footer>
 
-  <script type="module" src="scripts/modules.js"></script> 
-  <script type="module" src="scripts/hcscript.js"></script> 
+  <script type="module" src="scripts/modules.js"></script>
+  <script type="module" src="scripts/hcscript.js"></script>
 </body>
+
 </html>
 
 <!-- TO DO: Upload an existing file and fill all the fields on it, allowing to edit them -->
-<!-- TO DO: Standarize select default option texts hehe -->
+<!-- TO DO: Leave all the logic to javascript, include select default values -->
