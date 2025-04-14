@@ -5,69 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EUU Dashboard | Home</title>
   <link rel="stylesheet" href="styles/styles.css"> 
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #f3f4f6;
-      color: #111;
-    }
-    .dashboard {
-      display: flex;
-      height: 100vh;
-    }
-    .section {
-      padding: 1rem;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-    }
-    .section.left, .section.middle {
-      width: 30%;
-      border-right: 1px solid #ccc;
-    }
-    .section.right {
-      width: 40%;
-    }
-    .section h2 {
-      margin-top: 0;
-      font-size: 1.2rem;
-    }
-    .search-container {
-      margin-bottom: 0.5rem;
-    }
-    .search-container input {
-      width: 100%;
-      padding: 0.5rem;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .file-list {
-      flex-grow: 1;
-      overflow-y: auto;
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 0.5rem;
-    }
-    .file-item {
-      padding: 0.3rem 0.5rem;
-      border-bottom: 1px solid #eee;
-      font-size: 0.9rem;
-    }
-    .file-count {
-      margin-top: 0.5rem;
-      font-size: 0.85rem;
-      color: #555;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="header"><h1>EUU Dashboard | Home</h1></header>
     <nav class="navbar"id="navbar"></nav>
     
+  <main>  
   <div class="dashboard">
     <div class="section left">
       <h2>History Countries</h2>
@@ -88,7 +33,7 @@
     </div>
 
     <div class="section right">
-        <h2>Details</h2>
+        <h2>File Preview</h2>
   
         <div class="block">
           <h3>Selected File Preview</h3>
@@ -107,14 +52,17 @@
             </div>
             <button id="save-entry">Save Entry</button>
           </div>
-  
+      </div>
+
+      <div class="manager-section">
+        <h2>File Manager</h2>
         <div class="block">
-          <h3>Generated Tags</h3>
           <div id="entry-list" class="scrollable-list"></div>
           <button id="download-tags">Download Country Tags</button>
         </div>
       </div>
   </div>
+</main>
 
   <footer id="footer"></footer>
 

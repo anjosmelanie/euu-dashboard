@@ -81,7 +81,7 @@ function renderFileList(id, countId, searchId, localStorageKey) {
       const div = document.createElement('div');
       div.className = 'file-item';
       div.innerHTML = `
-        <span>${entry.name}</span>
+        <span>${entry.entryName}</span>
         <button data-index="${index}" class="delete-entry">🗑️</button>
       `;
       entryList.appendChild(div);
