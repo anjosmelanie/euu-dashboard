@@ -1,3 +1,12 @@
+:root {
+  --silver: #ccc;
+  --beige: #d9dbb5;
+  --flax: #d8cf8b;
+  --reseda-green: #7C9082;
+  --hookers-green: #6a7c74;
+  --jet: #2A2A2A;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   margin: 0;
@@ -5,8 +14,9 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #7C9082;
-  color: #2A2A2A;
+  background-color: var(--reseda-green);
+  color: var(--jet);
+  scrollbar-width: thin;
 }
 
 header,
@@ -16,7 +26,7 @@ footer {
 
 main {
   flex: 1 1 auto;
-  height: calc(100vh - 60px); /* adjust based on header height */
+  height: calc(100vh - 165px); /* adjust based on header height */
   gap: 1.2rem;
   padding: 1rem;
   box-sizing: border-box;
@@ -41,16 +51,17 @@ h2 {
 button {
   padding: 0.4rem 0.8rem;
   font-size: 1rem;
-  background-color: #7C9082;
-  color: #2A2A2A;
+  background-color: var(--reseda-green);
+  color: var(--jet);
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.2s;
+  font-family: 'Nunito', sans-serif;
 }
 
 button:hover {
-  background: #6a7c74;
+  background: var(--hookers-green);
 }
 
 label {
@@ -59,7 +70,7 @@ label {
   white-space: nowrap;
   margin-right: 0.5rem;
   vertical-align: middle;
-  color: #2A2A2A;
+  color: var(--jet);
 }
 
 #group-result {
@@ -74,11 +85,12 @@ input,
 select {
   display: inline-block;
   vertical-align: middle;
-  background-color: #d8cf8b;
-  border: 1px solid #7C9082;
-  color: #2A2A2A;
+  background-color: var(--flax);
+  border: 1px solid var(--reseda-green);
+  color: var(--jet);
   padding: 0.4rem;
   border-radius: 4px;
+  font-family: 'Nunito', sans-serif;
 }
 
 input[type="text"],
@@ -86,14 +98,14 @@ input[type="number"],
 select {
   padding: 0.4rem;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--silver);
   border-radius: 4px;
   width: 100%;
   box-sizing: border-box;
 }
 
 nav.navbar {
-  background-color: #7C9082;
+  background-color: var(--reseda-green);
   padding: 0.5rem 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -109,7 +121,7 @@ nav.navbar ul {
 
 nav.navbar li a {
   text-decoration: none;
-  color: #ecf0f1;
+  color: var(--silver);
   font-weight: 500;
   padding: 0.5rem;
   transition: color 0.2s, background-color 0.2s;
@@ -117,17 +129,17 @@ nav.navbar li a {
 }
 
 nav.navbar li a:hover {
-  background-color: #6a7c74;
-  color: #ffffff;
+  background-color: var(--hookers-green);
+  color: var(--silver);
 }
 
 .footer {
-  background: #6a7c74;
-  border-top: 1px solid #ccc;
+  background: var(--hookers-green);
+  border-top: 1px solid var(--silver);
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  color: #2A2A2A;
+  color: var(--jet);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -154,8 +166,8 @@ nav.navbar li a:hover {
 }
 
 .header {
-  background: #6a7c74;
-  color: #2A2A2A;
+  background: var(--hookers-green);
+  color: var(--jet);
   padding: 1rem 2rem;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -213,8 +225,8 @@ nav.navbar li a:hover {
 .form-section,
 .preview-section,
 .manager-section {
-  background-color: #d9dbb5;
-  border: 1px solid #7C9082;
+  background-color: var(--beige);
+  border: 1px solid var(--reseda-green);
   border-radius: 6px;
   padding: 1rem;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
@@ -225,7 +237,7 @@ nav.navbar li a:hover {
   white-space: pre-wrap;
   font-family: monospace;
   background-color: #f8f8f8;
-  border: 1px solid #ccc;
+  border: 1px solid var(--silver);;
   padding: 1rem;
   border-radius: 6px;
   max-block-size: 70cqb;
@@ -239,7 +251,7 @@ nav.navbar li a:hover {
 
 #form-section::-webkit-scrollbar-thumb,
 #save-manager::-webkit-scrollbar-thumb {
-  background-color: #aaa;
+  background-color: var(--beige);
   border-radius: 4px;
 }
 
@@ -254,7 +266,7 @@ nav.navbar li a:hover {
 .section-divider::after {
   content: '';
   flex: 1;
-  border-top: 1px solid #6a7c74;
+  border-top: 1px solid var(--hookers-green);
 }
 
 .section-divider::before {
@@ -267,14 +279,14 @@ nav.navbar li a:hover {
 
 .section-divider span {
   font-size: 0.95rem;
-  color: #6a7c74;
+  color: var(--hookers-green);
 }
 
 .save-entry {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #d8cf8b;
+  background: var(--flax);
   padding: 0.5rem 0.75rem;
   margin-bottom: 0.5rem;
   border-radius: 8px;
@@ -310,9 +322,9 @@ nav.navbar li a:hover {
 
 .readonly-entry {
   background-color: #f3f4f6;
-  color: #555;
+  color: var(--jet);
   cursor: default;
-  border: 1px solid #ccc;
+  border: 1px solid var(--silver);
   width: 100%;
 }
 
@@ -326,7 +338,7 @@ nav.navbar li a:hover {
 .color-preview {
   width: 2rem;
   height: 2rem;
-  border: 1px solid #2A2A2A;
+  border: 1px solid var(--jet);
   margin-left: 0.5rem;
   background-color: rgb(255, 255, 255); /* default white */
 }
