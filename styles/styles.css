@@ -336,9 +336,10 @@ nav.navbar li a:hover {
 }
 
 .color-preview {
-  width: 2rem;
+  width: 10rem;
   height: 2rem;
-  border: 1px solid var(--jet);
+  border: 1px solid var(--silver);
   margin-left: 0.5rem;
   background-color: rgb(255, 255, 255); /* default white */
+  border-radius: 6px;
 }

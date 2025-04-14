@@ -3,8 +3,8 @@ function renderNavbar() {
       <nav class="navbar" id="navbar">
         <ul>
           <li><a href="index.html">home</a></li>
-          <li><a href="history-countries.html">history/countries</a></li>
-          <li><a href="common-countries.html">common/countries</a></li>
+          <li><a href="history-countries.html">history / countries</a></li>
+          <li><a href="common-countries.html">common / countries</a></li>
         </ul>
       </nav>
     `;

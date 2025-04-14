@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EUU | common/countries</title>
   <link rel="stylesheet" href="styles/styles.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="header"><h1>EUU Dashboard | common / countries helper</h1></header>
@@ -13,7 +14,7 @@
 <main>
   <div class="container">
     <!-- Left column: the form -->
-    <div class="form-column" id="form-section">
+    <div class="form-section" id="form-section">
       <h2>Create a country file:</h2>
       <form id="dataForm">
 
@@ -75,7 +76,7 @@
     </div>
 
     <!-- Right column: live preview -->
-    <div class="preview-column">
+    <div class="preview-section">
       <h2>File Preview</h2>
       <div id="preview-box" class="preview-box"></div>
       <div class="horizontal">
@@ -87,14 +88,11 @@
         <button type="submit" id="save-country">Save country data</button>
         <button type="submit" id="download-country">Download country file</button>
       </div>
-      
     </div>
 
-    <div class="sidebar-column" id="save-manager">
-      <select id="savedCountriesSelect">
-        <option value="">-- Load a saved country --</option>
-      </select>
-      <button id="loadCountryBtn">Load</button>
+    <div class="manager-section">
+      <h2>File Manager</h2>
+      <div id="save-manager"></div>
     </div>
 
   </div>
