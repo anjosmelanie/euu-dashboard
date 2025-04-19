@@ -317,7 +317,6 @@ religionSelect.addEventListener('change', () => {
     document.getElementById('mil-skill').value = data.milskill || '';
   
     // Dynamic stuff 💫
-    console.log("Accepted cultures from storage:", data.acceptedCultures);
     setAcceptedCultures(data.acceptedCultures);
     setHistoricalFriends(data.historicalFriends);
     setHistoricalRivals(data.historicalEnemies);
